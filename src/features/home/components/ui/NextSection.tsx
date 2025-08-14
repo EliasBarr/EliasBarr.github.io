@@ -1,5 +1,5 @@
 import React from 'react';
-import './NextSection.css';
+import '../css/NextSection.css';
 
 interface NextSectionProps {
   title?: string;

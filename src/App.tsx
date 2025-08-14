@@ -1,10 +1,10 @@
 import './App.css'
 import './fonts.css'
-import TopBar from './components/TopBar'
-import Hero from './components/Hero'
-import NextSection from './components/NextSection'
+import TopBar from './core/common/components/ui/TopBar'
+import Hero from './features/home/components/ui/Hero'
+import NextSection from './features/home/components/ui/NextSection'
 import pikachuImage from './assets/pikachu_test.JPG'
-
+  
 function App() {
   return (
     <>
