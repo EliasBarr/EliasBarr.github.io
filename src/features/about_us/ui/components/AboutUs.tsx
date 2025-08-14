@@ -18,6 +18,7 @@ const AboutUs: React.FC<AboutUsProps> = ({
 }) => {
   return (
     <section className="about-us">
+      {/* todo: corregir responsive */}
       <div className="title-background">
         <h2 className="about-title font-heading">{title}</h2>
       </div>
