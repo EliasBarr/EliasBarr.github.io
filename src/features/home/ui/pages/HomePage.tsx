@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import NextSection from '../components/NextSection';
 import LetsContact from '../components/LetsContact';
-import pikachuImage from '../../../../assets/pikachu_test.JPG'; 
+import pikachuImage from '../../../../assets/pikachu_test.jpg'; 
 
 
 

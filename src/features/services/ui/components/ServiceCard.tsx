@@ -22,7 +22,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ card }) => {
           className={`card-image ${isHovered ? 'image-hovered' : ''}`}
         />
         <div className={`image-overlay ${isHovered ? 'overlay-visible' : ''}`}>
-          <h3 className="card-title">{card.title}</h3>
+          <h3 className={`card-title ${isHovered ? 'title-hidden' : ''}`}>{card.title}</h3>
         </div>
       </div>
       
