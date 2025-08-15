@@ -30,7 +30,7 @@ const TopBar: React.FC<TopBarProps> = ({
             <ul className="nav-list">
               <li><Link to="/" className="nav-link font-heading">Home</Link></li>
               <li><Link to="/about" className="nav-link font-heading">About Us</Link></li>
-              <li><a href="#services" className="nav-link font-heading">Services</a></li>
+              <li><Link to="/services" className="nav-link font-heading">Services</Link></li> 
               <li><a href="#portfolio" className="nav-link font-heading">Portfolio</a></li>
               <li><a href="#contact" className="nav-link font-heading">Contact</a></li>
             </ul>

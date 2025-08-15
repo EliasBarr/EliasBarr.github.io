@@ -1,8 +1,10 @@
 import React from 'react';
-import Hero from '../ui/components/Hero';
-import NextSection from '../ui/components/NextSection';
-import LetsContact from '../ui/components/LetsContact';
-import pikachuImage from '../../../assets/pikachu_test.JPG';
+import Hero from '../components/Hero';
+import NextSection from '../components/NextSection';
+import LetsContact from '../components/LetsContact';
+import pikachuImage from '../../../../assets/pikachu_test.JPG'; 
+
+
 
 const HomePage: React.FC = () => {
   return (
