@@ -1,11 +1,11 @@
 import './App.css'
 import './fonts.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import TopBar from './core/common/components/ui/TopBar'
+import TopBar from './core/common/ui/components/TopBar'
 import HomePage from './features/home/ui/pages/HomePage'
 import AboutUsPage from './features/about_us/ui/pages/AboutUsPage'
 import ServicesPage from './features/services/ui/pages/ServicesPage'
-import Footer from './core/common/components/ui/Footer'
+import Footer from './core/common/ui/components/Footer'
   
 function App() {
   return (
