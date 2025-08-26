@@ -27,6 +27,7 @@ const PromoCard: React.FC<PromoCardProps> = ({ data, isEven }) => {
           className="promo-image"
         />
       </div>
+      <button className="promo-button">Book Now</button>
     </div>
   );
 };
