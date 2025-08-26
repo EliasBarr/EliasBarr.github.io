@@ -6,6 +6,9 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
+  display: block;
+  color: inherit;
 }
 
 .card-image-container {
@@ -22,7 +25,8 @@
 }
 
 .image-hovered {
-  filter: brightness(0.7) contrast(0.8);
+  filter: brightness(1.2) contrast(0.5);
+  transform: scale(1.05);
 }
 
 .image-overlay {
@@ -39,7 +43,7 @@
 }
 
 .overlay-visible {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(217, 217, 217, 0.6);
 }
 
 .card-title {
@@ -94,7 +98,16 @@
 }
 
 .learn-more {
-  display: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #222222;
 }
 
 .arrow {

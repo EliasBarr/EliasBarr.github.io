@@ -10,6 +10,8 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({ card }) => {
   const [isHovered, setIsHovered] = useState(false);
 
+  console.log('ServiceCard hover state:', isHovered);
+
   return (
     <Link 
       to={`/services/${card.title.toLowerCase()}`}
