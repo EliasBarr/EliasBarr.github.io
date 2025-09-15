@@ -2,6 +2,7 @@ import React from 'react';
 import { TitlePageCard } from '../../../../core/common/ui/components';
 import '../css/WeddingPage.css';
 import PromoCard from '../components/PromoCard';
+import ContactSection from '../components/ContactSection';
 import { weddingPackages } from '../../constants/weddingPackages';
 
 const WeddingPage: React.FC = () => {
@@ -17,13 +18,15 @@ const WeddingPage: React.FC = () => {
       
       <div className="wedding-content">
         {weddingPackages.map((packageData, index) => (
-          <PromoCard 
-            key={index} 
+          <PromoCard
+            key={index}
             data={packageData}
             isEven={index % 2 === 0}
           />
         ))}
       </div>
+      
+      <ContactSection />
     </div>
   );
 };

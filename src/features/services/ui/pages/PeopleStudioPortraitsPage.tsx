@@ -2,6 +2,7 @@ import React from 'react';
 import { TitlePageCard } from '../../../../core/common/ui/components';
 import '../css/PeopleStudioPortraitsPage.css';
 import PromoCard from '../components/PromoCard';
+import ContactSection from '../components/ContactSection';
 import { peopleStudioPortraitsPackages } from '../../constants/peopleStudioPortraitsPackages';
 
 const PeopleStudioPortraitsPage: React.FC = () => {
@@ -24,6 +25,8 @@ const PeopleStudioPortraitsPage: React.FC = () => {
           />
         ))}
       </div>
+      
+      <ContactSection />
     </div>
   );
 };
