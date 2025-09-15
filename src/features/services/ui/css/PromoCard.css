@@ -78,21 +78,25 @@
 }
 
 .promo-button {
-  background-color: #E0E0E0;
-  color: #222222;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  padding: 12px 32px;
+  border-radius: 4px;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .promo-button:hover {
-  background-color: #CCCCCC;
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #000000;
 }
 
 .promo-image-container {

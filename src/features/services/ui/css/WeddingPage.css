@@ -7,8 +7,7 @@
   margin-top: 40px;
   width: 100%;
   min-height: 400px;
-  position: relative;
-  z-index: -1;
+  position: relative;;
 }
 
 .wedding-banner .title-page-card {
