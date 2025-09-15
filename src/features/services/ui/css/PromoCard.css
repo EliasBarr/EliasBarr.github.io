@@ -1,6 +1,6 @@
 .promo-card {
   width: 100%;
-  height: 500px;
+  height: 600px;
   background-color: #ffffff;
   display: flex;
   border-radius: 12px;
@@ -11,12 +11,13 @@
 .promo-inner-container {
   width: 60%;
   height: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 3rem;
   box-sizing: border-box;
+  min-height: 500px;
+  position: relative;
 }
 
 .promo-header {
@@ -24,37 +25,42 @@
   align-items: baseline;
   justify-content: space-between;
   margin-bottom: 1rem;
+  padding-right: 2rem;
+
 }
 
 .promo-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Lato', sans-serif;
   font-size: 1.8rem;
-  font-weight: 700;
-  color: #333333;
+  font-weight: 300;
+  color: #000000;
   margin: 0;
 }
 
 .promo-description {
   text-align: left;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 1.1rem;
-  color: #666666;
+  font-weight: 300;
+  color: #000000;
   margin: 0 0 1.5rem 0;
   line-height: 1.6;
 }
 
 .promo-items {
+  font-weight: 300;
   list-style: none;
   padding: 0;
-  margin: 0 0 1.5rem 0;
   flex-grow: 1;
+  font-size: 1.5rem;
 }
 
 .promo-items li {
   text-align: left;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 1rem;
-  color: #333333;
+  font-weight: 300;
+  color: #000000;
   margin-bottom: 0.5rem;
   padding-left: 1.5rem;
   position: relative;
@@ -70,10 +76,10 @@
 }
 
 .promo-price {
-  font-family: 'Inter', sans-serif;
-  font-size:1.8rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.8rem;
   font-weight: 300;
-  color: #666666;
+  color: #000000;
   margin: 0;
 }
 
@@ -88,9 +94,11 @@
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-  align-self: flex-start;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  position: absolute;
+  bottom: 2rem;
+  left: 3rem;
 }
 
 .promo-button:hover {
