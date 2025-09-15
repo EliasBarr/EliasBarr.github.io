@@ -12,7 +12,7 @@ export const weddingPackages: PromoCardData[] = [
       "1-minute highlight trailer video",
       "Delivery via online gallery within 1 to 2 weeks"
     ],
-    price: "$300 CAD",
+    price: ["$300 CAD"],
     imagePath: "/src/assets/couple.png"
   },
   {
@@ -26,7 +26,7 @@ export const weddingPackages: PromoCardData[] = [
       "2 to 3-minute highlight trailer video",
       "Delivery via online gallery within 1 to 2 weeks"
     ],
-    price: "$600 CAD",
+    price: ["$600 CAD"],
     imagePath: "/src/assets/wedding.png"
   },
   {
@@ -44,7 +44,7 @@ export const weddingPackages: PromoCardData[] = [
       "2 to 3-minute video from the wedding day",
       "Delivery of wedding day photos within 1 to 2 weeks"
     ],
-    price: "$1,500 CAD",
+    price: ["$1,500 CAD"],
     imagePath: "/src/assets/wedding_banner.png"
   }
 ];

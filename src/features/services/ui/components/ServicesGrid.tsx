@@ -11,7 +11,7 @@ const ServicesGrid: React.FC<ServicesGridProps> = ({ cards }) => {
   return (
     <div className="services-grid">
       {cards.map((card, index) => (
-        <ServiceCard key={index} card={card} />
+        <ServiceCard key={index} card={card} index={index} />
       ))}
     </div>
   );

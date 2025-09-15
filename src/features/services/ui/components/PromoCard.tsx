@@ -13,7 +13,11 @@ const PromoCard: React.FC<PromoCardProps> = ({ data, isEven }) => {
       <div className="promo-inner-container">
         <div className="promo-header">
           <h2 className="promo-title">{data.title}</h2>
-          <p className="promo-price">{data.price}</p>
+          <div className="promo-price">
+            {data.price.map((priceItem, index) => (
+              <p key={index} className="promo-price-item">{priceItem}</p>
+            ))}
+          </div>
         </div>
         <p className="promo-description">{data.description}</p>
         <ul className="promo-items">

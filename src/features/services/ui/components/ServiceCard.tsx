@@ -5,16 +5,25 @@ import '../css/ServiceCard.css';
 
 interface ServiceCardProps {
   card: SocialMediaCard;
+  index: number;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ card }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ card, index }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   console.log('ServiceCard hover state:', isHovered);
 
+  // Determine the route based on the index
+  const getRoute = () => {
+    if (index === 1) {
+      return '/people-studio-portraits';
+    }
+    return `/services/${card.title.toLowerCase()}`;
+  };
+
   return (
     <Link 
-      to={`/services/${card.title.toLowerCase()}`}
+      to={getRoute()}
       className="service-card"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
