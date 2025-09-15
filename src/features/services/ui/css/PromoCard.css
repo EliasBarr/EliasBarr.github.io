@@ -22,7 +22,7 @@
 .promo-header {
   display: flex;
   align-items: baseline;
-  gap: 1rem;
+  justify-content: space-between;
   margin-bottom: 1rem;
 }
 
@@ -35,6 +35,7 @@
 }
 
 .promo-description {
+  text-align: left;
   font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
   color: #666666;
@@ -50,6 +51,7 @@
 }
 
 .promo-items li {
+  text-align: left;
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   color: #333333;
@@ -94,7 +96,7 @@
 }
 
 .promo-image-container {
-  margin-top: 100px;
+  margin-top: 150px;
   width: 40%;
   height: 100%;
   overflow: hidden;
