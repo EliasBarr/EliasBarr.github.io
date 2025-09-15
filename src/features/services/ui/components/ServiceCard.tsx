@@ -18,6 +18,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ card, index }) => {
     if (index === 1) {
       return '/people-studio-portraits';
     }
+    if (index === 2) {
+      return '/product-photography';
+    }
     return `/services/${card.title.toLowerCase()}`;
   };
 
