@@ -2,7 +2,8 @@ import React from 'react';
 import Hero from '../components/Hero';
 import NextSection from '../components/NextSection';
 import LetsContact from '../components/LetsContact';
-import homeBanner from '../../../../assets/home_banner.png'; 
+import homeBanner from '../../../../assets/home_banner.png';
+import weddingImg from '../../../../assets/wedding_img.png'; 
 
 
 
@@ -19,7 +20,9 @@ const HomePage: React.FC = () => {
       <NextSection 
         title="MEANINGFUL MEMORIES THROUGH AUTHENTIC AND PROFESSIONAL IMAGES"
         description="I capture unique moments from the love of weddings to the essence of a product, the warmth of a family, or the strength of an individual portrait. My photography adapts to every story, brand, or emotion you want to share."
-        buttonText="Learn More"
+        buttonText="Contact Me"
+        imageUrl={weddingImg}
+        imageAlt="Wedding couple embrace"
       />
       
       <LetsContact 

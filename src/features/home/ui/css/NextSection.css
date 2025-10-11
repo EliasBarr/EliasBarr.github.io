@@ -85,28 +85,6 @@
 
 .section-button {
   align-self: flex-start;
-  background: #0B2447;
-  color: #ffffff;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: 500;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 12px rgba(11, 36, 71, 0.2);
-}
-
-.section-button:hover {
-  background: #1a365d;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(11, 36, 71, 0.3);
-}
-
-.section-button:active {
-  transform: translateY(0);
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -174,7 +152,7 @@
   }
   
   .section-button {
-    padding: 0.875rem 1.75rem;
+    padding: 10px 28px;
     font-size: 0.9rem;
   }
   

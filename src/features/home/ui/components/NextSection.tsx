@@ -1,10 +1,12 @@
 import React from 'react';
 import '../css/NextSection.css';
+import { Button } from '../../../../core/common/ui/components';
 
 interface NextSectionProps {
   title?: string;
   description?: string;
   buttonText?: string;
+  onButtonClick?: () => void;
   imageUrl?: string;
   imageAlt?: string;
 }
@@ -12,7 +14,8 @@ interface NextSectionProps {
 const NextSection: React.FC<NextSectionProps> = ({ 
   title = "MEANINGFUL MEMORIES THROUGH AUTHENTIC AND PROFESSIONAL IMAGES",
   description = "I capture unique moments from the love of weddings to the essence of a product, the warmth of a family, or the strength of an individual portrait. My photography adapts to every story, brand, or emotion you want to share.",
-  buttonText = "Learn More",
+  buttonText = "Contact Me",
+  onButtonClick,
   imageUrl,
   imageAlt = "Photography showcase"
 }) => {
@@ -38,7 +41,11 @@ const NextSection: React.FC<NextSectionProps> = ({
         <div className="next-section-content">
           <h2 className="section-title font-heading">{title}</h2>
           <p className="section-description font-body">{description}</p>
-          <button className="section-button font-body">{buttonText}</button>
+          <Button 
+            text={buttonText} 
+            onClick={onButtonClick}
+            className="section-button"
+          />
         </div>
       </div>
     </section>
