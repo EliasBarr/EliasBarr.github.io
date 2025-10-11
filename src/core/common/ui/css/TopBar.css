@@ -5,9 +5,9 @@
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0);
+  background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 1000; 
   padding: 1rem 0;
   transition: all 0.3s ease;
@@ -55,17 +55,19 @@
 
 .nav-link {
   text-decoration: none;
-  color: #000000;
+  color: #FFFFFF;
   font-weight: 400;
   font-size: 1.1rem; /* Tamaño más grande para Playfair */
   transition: all 0.3s ease;
   position: relative;
   padding: 0.5rem 0;
   letter-spacing: 0.5px; /* Espaciado de letras para elegancia */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .nav-link:hover {
-  color: #333333;
+  color: #FFFFFF;
+  opacity: 0.8;
   transform: translateY(-1px); /* Efecto sutil al hover */
 }
 
@@ -76,7 +78,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: #000000;
+  background: #FFFFFF;
   transition: width 0.3s ease;
 }
 
@@ -94,22 +96,45 @@
 }
 
 .social-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: transparent;
-  color: #000000;
-  transition: all 0.3s ease;
+  color: #FFFFFF !important;
+  transition: opacity 0.3s ease;
   text-decoration: none;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  outline: none !important;
+  padding: 0;
+  margin: 0;
+}
+
+.social-link svg {
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+  width: 24px;
+  height: 24px;
+  display: block;
 }
 
 .social-link:hover {
-  background: #000000;
-  color: #ffffff;
-  transform: translateY(-2px);
+  color: #FFFFFF !important;
+  opacity: 0.7;
+  background: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.social-link:focus {
+  outline: none !important;
+  background: none !important;
+}
+
+.social-link:hover svg {
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -131,9 +156,9 @@
     gap: 0.5rem;
   }
   
-  .social-link {
-    width: 35px;
-    height: 35px;
+  .social-link svg {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -161,6 +186,38 @@
 
 .topbar.scrolled .nav-link {
   font-size: 1rem; /* Tamaño más pequeño al hacer scroll */
+  color: #000000;
+  text-shadow: none;
+}
+
+.topbar.scrolled .nav-link:hover {
+  color: #333333;
+}
+
+.topbar.scrolled .nav-link::after {
+  background: #000000;
+}
+
+.topbar.scrolled .social-link {
+  color: #000000 !important;
+  filter: none;
+}
+
+.topbar.scrolled .social-link svg {
+  color: #000000 !important;
+  fill: #000000 !important;
+}
+
+.topbar.scrolled .social-link:hover {
+  background: transparent;
+  color: #000000 !important;
+  opacity: 0.7;
+  filter: none;
+}
+
+.topbar.scrolled .social-link:hover svg {
+  color: #000000 !important;
+  fill: #000000 !important;
 }
 
 /* ===== ANIMATIONS ===== */

@@ -46,7 +46,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
 }
@@ -63,36 +63,33 @@
 
 .hero-text {
   background: transparent;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 3rem 4rem;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  max-width: 800px;
+  padding: 2rem 3rem;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 /* ===== TITLE ===== */
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 400;
-  color: #0B2447;
-  margin: 0 0 1rem 0;
-  letter-spacing: 1px;
+  color: #FFFFFF;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: 3px;
   line-height: 1.2;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
 }
 
 /* ===== SUBTITLE ===== */
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 300;
-  color: #222222;
+  color: #FFFFFF;
   margin: 0;
   line-height: 1.6;
-  letter-spacing: 0.5px;
-  opacity: 0.9;
+  letter-spacing: 1px;
+  opacity: 0.95;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -105,16 +102,17 @@
   }
   
   .hero-text {
-    padding: 2rem 2.5rem;
+    padding: 1.5rem 2rem;
     margin: 0 1rem;
   }
   
   .hero-title {
     font-size: 2.5rem;
+    letter-spacing: 2px;
   }
   
   .hero-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -127,12 +125,13 @@
   }
   
   .hero-text {
-    padding: 1.5rem 2rem;
+    padding: 1rem 1.5rem;
     margin: 0 1rem;
   }
   
   .hero-title {
     font-size: 2rem;
+    letter-spacing: 1.5px;
   }
   
   .hero-subtitle {
@@ -150,10 +149,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.hero-text {
-  animation: fadeInUp 0.8s ease-out;
 }
 
 .hero-title {
@@ -175,7 +170,12 @@
   background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
 }
 
-.hero:not(:has(.hero-background)) .hero-text {
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+.hero:not(:has(.hero-background)) .hero-title {
+  color: #0B2447;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero:not(:has(.hero-background)) .hero-subtitle {
+  color: #222222;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }

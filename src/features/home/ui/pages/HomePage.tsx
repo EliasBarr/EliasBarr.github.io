@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import NextSection from '../components/NextSection';
 import LetsContact from '../components/LetsContact';
-import pikachuImage from '../../../../assets/pikachu_test.jpg'; 
+import homeBanner from '../../../../assets/home_banner.png'; 
 
 
 
@@ -12,7 +12,7 @@ const HomePage: React.FC = () => {
       <Hero 
         title="PHARUS PHOTOGRAPHY"
         subtitle="Histoires d'amour illuminées par l'art"
-        imageUrl={pikachuImage}
+        imageUrl={homeBanner}
         imageAlt="Pikachu surfing - Test image"
       />
       
@@ -20,14 +20,13 @@ const HomePage: React.FC = () => {
         title="MEANINGFUL MEMORIES THROUGH AUTHENTIC AND PROFESSIONAL IMAGES"
         description="I capture unique moments from the love of weddings to the essence of a product, the warmth of a family, or the strength of an individual portrait. My photography adapts to every story, brand, or emotion you want to share."
         buttonText="Learn More"
-        // imageUrl="ruta-de-tu-imagen.jpg" // Descomenta cuando tengas la imagen
       />
       
       <LetsContact 
         title="Let's Connect"
         description="Let's talk and bring your vision to life — every great story begins with a conversation."
         buttonText="Contact Me"
-        imageUrl={pikachuImage}
+        imageUrl={homeBanner}
         imageAlt="Pikachu surfing - Contact background"
       />
     </main>
