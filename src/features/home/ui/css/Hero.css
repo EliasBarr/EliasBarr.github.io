@@ -30,14 +30,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top; /* Priorizar la parte superior de la imagen */
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  will-change: transform;
+  object-position: center top;
 }
 
 .hero-overlay {
@@ -47,8 +40,6 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
 }
 
 /* ===== HERO CONTENT ===== */
