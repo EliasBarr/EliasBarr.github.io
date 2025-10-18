@@ -57,28 +57,50 @@
 }
 
 .social-icons {
-  display: flex;
-  gap: 1.5rem;
+    display: flex;
+  gap: 0.75rem;
   align-items: center;
 }
 
-.social-link {
+.footer .social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  color: #2d3748;
+  width: 24px;
+  height: 24px;
+  color: #000000 !important;
   transition: all 0.3s ease;
   text-decoration: none;
-  border-radius: 50%;
-  background: transparent;
+  text-shadow: none !important;
+  filter: none !important;
+  box-shadow: none !important;
 }
 
-.social-link:hover {
-  color: #0B2447;
-  background: #f7fafc;
-  transform: translateY(-2px);
+.footer .social-link:hover {
+  color: #000000 !important;
+  opacity: 0.7;
+  text-shadow: none !important;
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+.footer .social-link svg {
+  color: #000000 !important;
+  fill: #000000 !important;
+  width: 20px;
+  height: 20px;
+  display: block;
+  text-shadow: none !important;
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+.footer .social-link:hover svg {
+  color: #000000 !important;
+  fill: #000000 !important;
+  text-shadow: none !important;
+  filter: none !important;
+  box-shadow: none !important;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -118,8 +140,8 @@
   }
   
   .social-link {
-    width: 28px;
-    height: 28px;
+    width: 20px;
+    height: 20px;
   }
 }
 
