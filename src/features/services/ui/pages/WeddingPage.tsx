@@ -4,13 +4,14 @@ import '../css/WeddingPage.css';
 import PromoCard from '../components/PromoCard';
 import ContactSection from '../components/ContactSection';
 import { weddingPackages } from '../../constants/weddingPackages';
+import weddingBanner from '../../../../assets/wedding_banner_page.png'; 
 
 const WeddingPage: React.FC = () => {
   return (
     <div className="wedding-page">
       <div className="wedding-banner">
         <TitlePageCard 
-          assetPath="/src/assets/wedding_banner.png"
+          assetPath={weddingBanner}
           title="WEDDINGS"
           alt="Wedding banner with couple's hands holding flowers"
         />
