@@ -1,6 +1,7 @@
 import './App.css'
 import './fonts.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { AppProvider } from './core/contexts/AppContext'
 import TopBar from './core/common/ui/components/TopBar'
 import HomePage from './features/home/ui/pages/HomePage'
 import AboutUsPage from './features/about_us/ui/pages/AboutUsPage'
@@ -12,25 +13,27 @@ import ProductPhotographyPage from './features/services/ui/pages/ProductPhotogra
   
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <TopBar title="PHARUS PHOTOGRAPHY" />
-        
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutUsPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/services/weddings" element={<WeddingPage />} />
-          <Route path="/people-studio-portraits" element={<PeopleStudioPortraitsPage />} />
-          <Route path="/product-photography" element={<ProductPhotographyPage />} />
-        </Routes>
-        
-        <Footer 
-          title="PHARUS PHOTOGRAPHY"
-          showSocialIcons={true}
-        />
-      </div>
-    </Router>
+    <AppProvider>
+      <Router>
+        <div className="App">
+          <TopBar title="PHARUS PHOTOGRAPHY" />
+          
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutUsPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/weddings" element={<WeddingPage />} />
+            <Route path="/people-studio-portraits" element={<PeopleStudioPortraitsPage />} />
+            <Route path="/product-photography" element={<ProductPhotographyPage />} />
+          </Routes>
+          
+          <Footer 
+            title="PHARUS PHOTOGRAPHY"
+            showSocialIcons={true}
+          />
+        </div>
+      </Router>
+    </AppProvider>
   )
 }
 

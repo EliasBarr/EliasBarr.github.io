@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollEffect } from '../../hooks/useScrollEffect';
+import { useApp } from '../../../contexts/AppContext';
 import '../css/TopBar.css';
 
 interface TopBarProps {
@@ -15,9 +16,10 @@ const TopBar: React.FC<TopBarProps> = ({
   showSocialIcons = true 
 }) => {
   const isScrolled = useScrollEffect();
+  const { isHero } = useApp();
 
   return (
-    <header className={`topbar ${isScrolled ? 'scrolled' : ''}`}>
+    <header className={`topbar ${isScrolled ? 'scrolled' : ''} ${!isHero ? 'not-hero' : ''}`}>
       <div className="topbar-container">
         {/* Logo/Título - Oculto */}
         <div className="topbar-brand">

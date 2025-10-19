@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Hero from '../components/Hero';
 import NextSection from '../components/NextSection';
 import LetsContact from '../components/LetsContact';
+import { useApp } from '../../../../core/contexts/AppContext';
 import homeBanner from '../../../../assets/home_banner.png';
 import weddingImg from '../../../../assets/wedding_img.png';
 import contactBg from '../../../../assets/contact_me_bg.png'; 
@@ -9,6 +10,18 @@ import contactBg from '../../../../assets/contact_me_bg.png';
 
 
 const HomePage: React.FC = () => {
+  const { setIsHero } = useApp();
+
+  useEffect(() => {
+    // Establecer isHero como true en la página de inicio
+    setIsHero(true);
+    
+    // Cleanup: establecer isHero como false al salir de la página
+    return () => {
+      setIsHero(false);
+    };
+  }, [setIsHero]);
+
   return (
     <main>
       <Hero 
