@@ -23,6 +23,7 @@
 /* Responsive design */
 @media (max-width: 768px) {
   .wedding-banner {
+    position: flex;
     height: 50vh;
     min-height: 300px;
   }
