@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollEffect } from '../../hooks/useScrollEffect';
 import { useApp } from '../../../contexts/AppContext';
@@ -17,6 +17,7 @@ const TopBar: React.FC<TopBarProps> = ({
 }) => {
   const isScrolled = useScrollEffect();
   const { isHero } = useApp();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <header className={`topbar ${isScrolled ? 'scrolled' : ''} ${!isHero ? 'not-hero' : ''}`}>
@@ -28,15 +29,39 @@ const TopBar: React.FC<TopBarProps> = ({
 
         {/* Navegación con Playfair Display */}
         {showNavigation && (
-          <nav className="topbar-nav">
-            <ul className="nav-list">
-              <li><Link to="/" className="nav-link font-heading">Home</Link></li>
-              <li><Link to="/about" className="nav-link font-heading">About Us</Link></li>
-              <li><Link to="/services" className="nav-link font-heading">Services</Link></li> 
-              <li><a href="#portfolio" className="nav-link font-heading">Portfolio</a></li>
-              <li><a href="#contact" className="nav-link font-heading">Contact</a></li>
-            </ul>
-          </nav>
+          <>
+            <nav className="topbar-nav">
+              <ul className="nav-list">
+                <li><Link to="/" className="nav-link font-heading">Home</Link></li>
+                <li><Link to="/about" className="nav-link font-heading">About Us</Link></li>
+                <li><Link to="/services" className="nav-link font-heading">Services</Link></li> 
+                <li><a href="#portfolio" className="nav-link font-heading">Portfolio</a></li>
+                <li><a href="#contact" className="nav-link font-heading">Contact</a></li>
+              </ul>
+            </nav>
+
+            {/* Botón Hamburguesa */}
+            <button 
+              className="mobile-menu-toggle"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              <span className={`hamburger-line ${isMobileMenuOpen ? 'active' : ''}`}></span>
+              <span className={`hamburger-line ${isMobileMenuOpen ? 'active' : ''}`}></span>
+              <span className={`hamburger-line ${isMobileMenuOpen ? 'active' : ''}`}></span>
+            </button>
+
+            {/* Menú Móvil */}
+            <nav className={`mobile-nav ${isMobileMenuOpen ? 'open' : ''}`}>
+              <ul className="mobile-nav-list">
+                <li><Link to="/" className="mobile-nav-link font-heading" onClick={() => setIsMobileMenuOpen(false)}>Home</Link></li>
+                <li><Link to="/about" className="mobile-nav-link font-heading" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link></li>
+                <li><Link to="/services" className="mobile-nav-link font-heading" onClick={() => setIsMobileMenuOpen(false)}>Services</Link></li>
+                <li><a href="#portfolio" className="mobile-nav-link font-heading" onClick={() => setIsMobileMenuOpen(false)}>Portfolio</a></li>
+                <li><a href="#contact" className="mobile-nav-link font-heading" onClick={() => setIsMobileMenuOpen(false)}>Contact</a></li>
+              </ul>
+            </nav>
+          </>
         )}
 
         {/* Iconos Sociales */}

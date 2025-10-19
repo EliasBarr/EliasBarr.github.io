@@ -18,7 +18,8 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center; /* Centrado sin título */
+  justify-content: center; /* Centered on desktop */
+  padding: 0 2rem;
 }
 
 /* ===== BRAND/LOGO ===== */
@@ -162,19 +163,105 @@
   }
 }
 
+/* ===== MOBILE MENU STYLES ===== */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 2px;
+  background-color: #FFFFFF;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.topbar.not-hero .hamburger-line {
+  background-color: #000000;
+}
+
+.hamburger-line.active:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger-line.active:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-line.active:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-nav.open {
+  transform: translateX(0);
+}
+
+.mobile-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+.mobile-nav-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  padding: 1rem;
+}
+
+.mobile-nav-link:hover {
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
 @media (max-width: 640px) {
   .topbar-nav {
     display: none; /* Hide navigation on mobile */
   }
   
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
   .topbar-container {
-    justify-content: center;
+    justify-content: space-between;
   }
   
   .topbar-social {
-    position: static;
-    margin-left: auto;
+    display: none; /* Hide social icons on mobile */
   }
+  
 }
 
 /* ===== SCROLL EFFECTS ===== */
