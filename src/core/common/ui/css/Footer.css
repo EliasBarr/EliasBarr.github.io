@@ -8,7 +8,7 @@
 .footer-navigation {
   background: #ffffff;
   color: #2d3748;
-  padding: 2.5rem 0;
+  padding: 1rem 0;
 }
 
 .nav-container {
@@ -28,7 +28,7 @@
 }
 
 .footer-logo {
-  height: 40px;
+  height: 60px;
   width: auto;
   object-fit: contain;
 }
@@ -112,6 +112,10 @@
     text-align: center;
   }
   
+  .footer-navigation {
+    padding: 1rem 0;
+  }
+  
   .footer-contact {
     flex-direction: column;
     gap: 1rem;
@@ -120,10 +124,6 @@
   .footer-title {
     font-size: 1.3rem;
   }
-  
-  .footer-logo {
-    height: 35px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -131,12 +131,16 @@
     padding: 0 1rem;
   }
   
+  .footer-navigation {
+    padding: 0.5rem 0;
+  }
+  
   .footer-title {
     font-size: 1.2rem;
   }
   
   .footer-logo {
-    height: 30px;
+    height: 40px;
   }
   
   .social-link {
