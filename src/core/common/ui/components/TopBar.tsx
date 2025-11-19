@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useScrollEffect } from '../../hooks/useScrollEffect';
 import { useApp } from '../../../contexts/AppContext';
 import { SOCIAL_LINKS } from '../../../constants/contactInfo';
@@ -18,10 +18,13 @@ const TopBar: React.FC<TopBarProps> = ({
 }) => {
   const isScrolled = useScrollEffect();
   const { isHero } = useApp();
+  const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  const isPortfolioPage = location.pathname === '/portfolio';
 
   return (
-    <header className={`topbar ${isScrolled ? 'scrolled' : ''} ${!isHero ? 'not-hero' : ''}`}>
+    <header className={`topbar ${isScrolled ? 'scrolled' : ''} ${!isHero ? 'not-hero' : ''} ${isPortfolioPage ? 'portfolio-mode' : ''}`}>
       <div className="topbar-container">
         {/* Logo/Título - Oculto */}
         <div className="topbar-brand">

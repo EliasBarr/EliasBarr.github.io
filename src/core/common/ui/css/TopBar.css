@@ -351,6 +351,51 @@
   fill: #000000 !important;
 }
 
+/* ===== PORTFOLIO MODE STYLES ===== */
+.topbar.portfolio-mode {
+  background: #000000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.topbar.portfolio-mode .nav-link {
+  color: #FFFFFF;
+  text-shadow: none;
+}
+
+.topbar.portfolio-mode .nav-link:hover {
+  color: #FFFFFF;
+  opacity: 0.8;
+}
+
+.topbar.portfolio-mode .nav-link::after {
+  background: #FFFFFF;
+}
+
+.topbar.portfolio-mode .social-link {
+  color: #FFFFFF !important;
+  filter: none;
+}
+
+.topbar.portfolio-mode .social-link svg {
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+}
+
+.topbar.portfolio-mode .social-link:hover {
+  color: #FFFFFF !important;
+  opacity: 0.7;
+}
+
+.topbar.portfolio-mode .social-link:hover svg {
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+}
+
+.topbar.portfolio-mode .hamburger-line {
+  background-color: #FFFFFF;
+}
+
 /* ===== ANIMATIONS ===== */
 @keyframes fadeInDown {
   from {
