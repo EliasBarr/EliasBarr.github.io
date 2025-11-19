@@ -11,6 +11,15 @@
   padding: 0 2rem;
 }
 
+.portfolio-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  /* Reduce rendering quality for performance */
+  image-rendering: -webkit-optimize-contrast;
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
   .portfolio-section {
