@@ -14,10 +14,8 @@ const HomePage: React.FC = () => {
   const { setIsHero } = useApp();
 
   useEffect(() => {
-    // Establecer isHero como true en la página de inicio
     setIsHero(true);
     
-    // Cleanup: establecer isHero como false al salir de la página  
     return () => {
       setIsHero(false);
     };
