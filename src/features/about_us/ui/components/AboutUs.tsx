@@ -10,7 +10,7 @@ interface AboutUsProps {
   imageAlt?: string;
   onButtonClick?: () => void;
 }
-
+// commit vacio
 const AboutUs: React.FC<AboutUsProps> = ({ 
   title = ABOUT_US_CONTENT.title,
   imageUrl,
