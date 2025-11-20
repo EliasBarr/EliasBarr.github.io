@@ -42,8 +42,9 @@ const NextSection: React.FC<NextSectionProps> = ({
           <h2 className="section-title font-heading">{title}</h2>
           <p className="section-description font-body">{description}</p>
           <Button 
-            text={buttonText} 
+            text="Contact Me"
             onClick={onButtonClick}
+            variant="primary"
             className="section-button"
           />
         </div>

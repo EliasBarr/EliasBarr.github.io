@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/PromoCard.css';
 import type { PromoCardData } from '../interfaces/promoCard';
+import { Button } from '../../../../core/common/ui/components';
 
 interface PromoCardProps {
   data: PromoCardData;
@@ -25,7 +26,12 @@ const PromoCard: React.FC<PromoCardProps> = ({ data, isEven }) => {
             <li key={index}>{item}</li>
           ))}
         </ul>
-        <button className="promo-button">Book Now</button>
+        <Button 
+            text="Book Now"
+            onClick={() => {}}
+            variant="primary"
+            className="section-button"
+          />
       </div>
       <div className="promo-image-container">
         <img 

@@ -38,10 +38,10 @@ const LetsContact: React.FC<LetsContactProps> = ({
           <h2 className="contact-title font-heading">{title}</h2>
           <p className="contact-description font-body">{description}</p>
           <Button 
-            text={buttonText}
+            text="Contact Me"
             onClick={onButtonClick}
             variant="primary"
-            className="contact-button"
+            className="section-button"
           />
         </div>
       </div>
