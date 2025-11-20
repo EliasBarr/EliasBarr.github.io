@@ -1,10 +1,16 @@
 /* ===== ABOUT US STYLES ===== */
 
 .about-us {
-  padding: 15rem 0;
+  padding: 0;
   min-height: 80vh;
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.about-wrapper {
+  width: 100%;
+  padding: 15rem 0;
   position: relative;
 }
 
@@ -157,27 +163,31 @@
 }
 
 @media (max-width: 768px) {
-  .about-us {
-    padding: 8rem 0 4rem 0;
+  .about-wrapper {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
   }
   
   .title-background {
-    margin-top: 3rem;
-    padding-bottom: 1rem;
+    margin-top: 0;
+    padding: 2rem 1.5rem;
     height: auto;
     position: relative;
     background: #c1b6ab59;
+    order: 1;
   }
   
   .about-container {
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 0 1.5rem;
+    padding: 3rem 1.5rem;
+    order: 2;
   }
   
   .about-title {
-    padding-top: 2rem;
-    padding-right: 0;
+    padding: 0;
+    padding-top: 6rem;
     text-align: center;
     font-size: 2.5rem; /* Proportional to 3.75rem */
   }
@@ -204,22 +214,17 @@
 }
 
 @media (max-width: 480px) {
-  .about-us {
-    padding: 6rem 0 3rem 0;
-  }
-  
   .title-background {
-    margin-top: 2rem;
-    padding-bottom: 0.5rem;
+    padding: 1.5rem 1rem;
   }
   
   .about-container {
-    padding: 0 1rem;
+    padding: 2rem 1rem;
     gap: 1.5rem;
   }
   
   .about-title {
-    padding-top: 1.5rem;
+    padding-top: 5rem;
     font-size: 2rem; /* Proportional to 3.75rem */
   }
   

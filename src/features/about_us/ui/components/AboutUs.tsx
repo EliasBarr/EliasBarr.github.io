@@ -21,42 +21,39 @@ const AboutUs: React.FC<AboutUsProps> = ({
 }) => {
   return (
     <section className="about-us">
-      {/* todo: corregir responsive */}
-      <div className="title-background">
-        <h2 className="about-title font-heading">{title}</h2>
-      </div>
-      
-      <div className="about-container">
-        {/* Columna Izquierda - Imagen */}
-        <div className="about-image">
-          
-          {imageUrl ? (
-
-            <img 
-              src={imageUrl} 
-              alt={imageAlt} 
-              className="cat-image"
-            />
-            
-          ) : (
-            <div className="image-placeholder">
-              <span>{ABOUT_US_CONTENT.imagePlaceholder}</span>
-            </div>
-          )}
-          
+      <div className="about-wrapper">
+        <div className="title-background">
+          <h2 className="about-title font-heading">{title}</h2>
         </div>
+        
+        <div className="about-container">
+          {/* Columna Izquierda - Imagen */}
+          <div className="about-image">
+            {imageUrl ? (
+              <img 
+                src={imageUrl} 
+                alt={imageAlt} 
+                className="cat-image"
+              />
+            ) : (
+              <div className="image-placeholder">
+                <span>{ABOUT_US_CONTENT.imagePlaceholder}</span>
+              </div>
+            )}
+          </div>
 
-        {/* Columna Derecha - Contenido */}
-        <div className="about-content">
-          <div className="text-container">
-            {ABOUT_US_CONTENT.paragraphs.map((paragraph, index) => (
-              <React.Fragment key={index}>
-                <p className="about-text font-body">
-                  {paragraph}
-                </p>
-                {index === 1 && <br />}
-              </React.Fragment>
-            ))}
+          {/* Columna Derecha - Contenido */}
+          <div className="about-content">
+            <div className="text-container">
+              {ABOUT_US_CONTENT.paragraphs.map((paragraph, index) => (
+                <React.Fragment key={index}>
+                  <p className="about-text font-body">
+                    {paragraph}
+                  </p>
+                  {index === 1 && <br />}
+                </React.Fragment>
+              ))}
+            </div>
           </div>
         </div>
       </div>
