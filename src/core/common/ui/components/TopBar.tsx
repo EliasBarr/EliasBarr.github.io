@@ -12,7 +12,6 @@ interface TopBarProps {
 }
 
 const TopBar: React.FC<TopBarProps> = ({ 
-  title = "PHARUS PHOTOGRAPHY", 
   showNavigation = true, 
   showSocialIcons = true 
 }) => {

@@ -14,7 +14,6 @@ interface LetsContactProps {
 const LetsContact: React.FC<LetsContactProps> = ({ 
   title = "Let's Connect",
   description = "Let's talk and bring your vision to life — every great story begins with a conversation.",
-  buttonText = "Contact Me",
   onButtonClick,
   imageUrl,
   imageAlt = "Contact background"

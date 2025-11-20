@@ -14,7 +14,6 @@ interface NextSectionProps {
 const NextSection: React.FC<NextSectionProps> = ({ 
   title = "MEANINGFUL MEMORIES THROUGH AUTHENTIC AND PROFESSIONAL IMAGES",
   description = "I capture unique moments from the love of weddings to the essence of a product, the warmth of a family, or the strength of an individual portrait. My photography adapts to every story, brand, or emotion you want to share.",
-  buttonText = "Contact Me",
   onButtonClick,
   imageUrl,
   imageAlt = "Photography showcase"

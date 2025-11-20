@@ -4,6 +4,7 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/', // GitHub Pages base path para EliasBarr.github.io
   plugins: [
     react(),
     ViteImageOptimizer({

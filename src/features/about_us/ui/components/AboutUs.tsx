@@ -13,9 +13,6 @@ interface AboutUsProps {
 
 const AboutUs: React.FC<AboutUsProps> = ({ 
   title = ABOUT_US_CONTENT.title,
-  description,
-  buttonText = "Contact Me",
-  onButtonClick,
   imageUrl,
   imageAlt = ABOUT_US_CONTENT.imageAlt
 }) => {
