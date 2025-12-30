@@ -29,11 +29,12 @@
 }
 
 .promo-title {
-  font-family: 'Lato', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 300;
-  color: #000000;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222222;
   margin: 0;
+  letter-spacing: 0;
 }
 
 .promo-description {
@@ -51,7 +52,7 @@
   list-style: none;
   padding: 0;
   flex-grow: 1;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .promo-items li {
@@ -166,12 +167,13 @@
 }
 
 .promo-mobile-title {
-  font-family: 'Lato', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #000000;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222222;
   margin: 0;
   flex: 1;
+  letter-spacing: 0;
 }
 
 .promo-mobile-price {
