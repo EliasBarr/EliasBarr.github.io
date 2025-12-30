@@ -10,7 +10,6 @@ interface AboutUsProps {
   imageAlt?: string;
   onButtonClick?: () => void;
 }
-// commit vacio
 const AboutUs: React.FC<AboutUsProps> = ({ 
   title = ABOUT_US_CONTENT.title,
   imageUrl,
@@ -24,7 +23,6 @@ const AboutUs: React.FC<AboutUsProps> = ({
         </div>
         
         <div className="about-container">
-          {/* Columna Izquierda - Imagen */}
           <div className="about-image">
             {imageUrl ? (
               <img 
@@ -39,7 +37,6 @@ const AboutUs: React.FC<AboutUsProps> = ({
             )}
           </div>
 
-          {/* Columna Derecha - Contenido */}
           <div className="about-content">
             <div className="text-container">
               {ABOUT_US_CONTENT.paragraphs.map((paragraph, index) => (
