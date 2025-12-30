@@ -1,0 +1,20 @@
+.image-gallery {
+  width: 100%;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-gallery img {
+  transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.02);
+}
+
+.promo-mobile-button {
+  margin-top: 2rem;
+}
+

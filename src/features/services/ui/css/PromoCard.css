@@ -143,19 +143,26 @@
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  border-radius: 12px;
   padding: 2rem 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 0;
 }
 
 .promo-mobile-header {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
   margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #e0e0e0;
+}
+
+.promo-card-divider {
+  align-self: center;
+  width: 90%;
+  height: .4px;
+  background-color: #000000;
+  margin: 1rem 0;
+
 }
 
 .promo-mobile-title {
@@ -164,12 +171,15 @@
   font-weight: 400;
   color: #000000;
   margin: 0;
+  flex: 1;
 }
 
 .promo-mobile-price {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 0.25rem;
+  flex-shrink: 0;
 }
 
 .promo-mobile-price-item {
@@ -178,6 +188,7 @@
   font-weight: 300;
   color: #000000;
   margin: 0;
+  text-align: right;
 }
 
 .promo-mobile-description {
