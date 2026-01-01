@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { useScrollEffect } from '../../hooks/useScrollEffect';
 import { useApp } from '../../../contexts/AppContext';
 import { SOCIAL_LINKS } from '../../../constants/contactInfo';
-import { useIsDesktop } from '../../hooks/useMediaQuery';
 import pharusLogoBlack from '../../../../assets/pharus_logo_black.png';
 import '../css/TopBar.css';
 
@@ -23,14 +22,13 @@ const TopBar: React.FC<TopBarProps> = ({
   const { isHero } = useApp();
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const isDesktop = useIsDesktop();
   
   const isPortfolioPage = location.pathname === '/portfolio';
 
   return (
     <header className={`topbar ${isScrolled ? 'scrolled' : ''} ${!isHero ? 'not-hero' : ''} ${isPortfolioPage ? 'portfolio-mode' : ''}`}>
       <div className="topbar-container">
-        {showBrand && !isDesktop && (
+        {showBrand && (
           <Link to="/" className="topbar-brand">
             <img src={pharusLogoBlack} alt="Pharus Creative Logo" className="topbar-logo" />
             <div className="topbar-brand-text">

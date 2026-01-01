@@ -32,12 +32,12 @@ const PromoCard: React.FC<PromoCardProps> = ({ data, isEven, isLast = false }) =
             ))}
           </ul>
           <div className="promo-mobile-footer">
-            {/* <Button 
+            <Button 
               text="Book Now"
               onClick={() => {}}
               variant="primary"
               className="promo-mobile-button"
-            /> */}
+            />
           </div>
         </div>
         {!isLast && <div className="promo-card-divider"></div>}
