@@ -38,6 +38,99 @@
   margin: 0 auto;
 }
 
+.events-coverage-box {
+  background-color: #E8E8E8;
+  padding: 3rem 4rem;
+  margin: 4rem auto;
+  max-width: 820px;
+}
+
+.coverage-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #000000;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
+
+.coverage-list {
+  list-style: disc;
+  padding-left: 2rem;
+  margin: 0;
+}
+
+.coverage-list li {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #000000;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.coverage-list li:last-child {
+  margin-bottom: 0;
+}
+
+.how-it-works {
+  margin: 4rem auto;
+  max-width: 900px;
+}
+
+.how-it-works-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.75rem;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+  margin: 0 0 3rem 0;
+  letter-spacing: 0;
+}
+
+.work-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.work-step {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.step-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.75rem;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.step-content {
+  flex: 1;
+  padding-top: 0.5rem;
+}
+
+.step-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 0.5rem 0;
+}
+
+.step-description {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: #000000;
+  line-height: 1.6;
+  margin: 0;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .events-banner {
@@ -56,6 +149,40 @@
   .events-subtitle {
     font-size: 1.75rem;
   }
+
+  .events-coverage-box {
+    padding: 2rem 2rem;
+    margin: 3rem auto;
+  }
+
+  .coverage-title {
+    font-size: 1.25rem;
+  }
+
+  .coverage-list li {
+    font-size: 1.1rem;
+  }
+
+  .how-it-works-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .work-steps {
+    gap: 2rem;
+  }
+
+  .step-number {
+    font-size: 2.5rem;
+  }
+
+  .step-title {
+    font-size: 1.1rem;
+  }
+
+  .step-description {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -66,6 +193,48 @@
 
   .events-subtitle {
     font-size: 1.5rem;
+  }
+
+  .events-coverage-box {
+    padding: 1.5rem 1.5rem;
+    margin: 2rem auto;
+  }
+
+  .coverage-title {
+    font-size: 1.1rem;
+  }
+
+  .coverage-list {
+    padding-left: 1.5rem;
+  }
+
+  .coverage-list li {
+    font-size: 1rem;
+  }
+
+  .how-it-works-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .work-steps {
+    gap: 1.5rem;
+  }
+
+  .work-step {
+    gap: 1rem;
+  }
+
+  .step-number {
+    font-size: 2rem;
+  }
+
+  .step-title {
+    font-size: 1rem;
+  }
+
+  .step-description {
+    font-size: 0.95rem;
   }
 }
 

@@ -70,6 +70,18 @@
   border: 1px solid #BFBFBF;
 }
 
+.button-transparent {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.button-transparent:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #ffffff;
+}
+
 @media (max-width: 480px) {
   .button {
     padding: 10px 28px;

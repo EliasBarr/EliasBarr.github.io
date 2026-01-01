@@ -4,7 +4,7 @@ import '../css/Button.css';
 interface ButtonProps {
   text: string;
   onClick?: () => void;
-  variant?: 'primary' | 'secondary' | 'tertiary';
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'transparent';
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
   className?: string;
