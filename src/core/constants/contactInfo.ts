@@ -16,6 +16,10 @@ export const CONTACT_INFO = {
     url: 'https://www.instagram.com/pharus.creative/'
   },
 
+  linkedin: {
+    url: 'https://www.linkedin.com/in/elias-barrios-alvarez/'
+  },
+
 
   company: {
     name: 'Pharus Creative',
@@ -32,7 +36,8 @@ export const CONTACT_INFO = {
 
 export const SOCIAL_LINKS = {
   whatsapp: CONTACT_INFO.whatsapp.url,
-  instagram: CONTACT_INFO.instagram.url
+  instagram: CONTACT_INFO.instagram.url,
+  linkedin: CONTACT_INFO.linkedin.url
 } as const;
 
 export default CONTACT_INFO;
