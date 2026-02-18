@@ -32,6 +32,7 @@
 /* Keep masonry items fluid so images keep natural aspect ratio (fixes mobile squashing) */
 .portfolio-section .MuiImageListItem-root {
   break-inside: avoid;
+  overflow: hidden;
 }
 
 .portfolio-section .MuiImageListItem-root img {
