@@ -66,19 +66,18 @@ const PortfolioLightbox: React.FC<PortfolioLightboxProps> = ({
       onClick={handleBackdropClick}
     >
       <div className="portfolio-lightbox__backdrop" />
+      <button
+        ref={closeButtonRef}
+        type="button"
+        className="portfolio-lightbox__close"
+        onClick={onClose}
+        aria-label="Cerrar"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
       <div className="portfolio-lightbox__content">
-        <button
-          ref={closeButtonRef}
-          type="button"
-          className="portfolio-lightbox__close"
-          onClick={onClose}
-          aria-label="Cerrar"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-            <path d="M18 6L6 18M6 6l12 12" />
-          </svg>
-        </button>
-
         {hasMultiple && canGoPrev && (
           <button
             type="button"

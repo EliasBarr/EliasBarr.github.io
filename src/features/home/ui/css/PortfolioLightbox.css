@@ -36,6 +36,7 @@
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
+  z-index: 10;
   width: 2.5rem;
   height: 2.5rem;
   padding: 0;
@@ -72,28 +73,28 @@
   height: 3rem;
   padding: 0;
   border: none;
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.9);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
   cursor: pointer;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease, filter 0.2s ease;
 }
 
 .portfolio-lightbox__nav:hover {
-  background: rgba(255, 255, 255, 0.18);
   color: #fff;
+  transform: translateY(-50%) scale(1.2);
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
 }
 
 .portfolio-lightbox__nav:active {
-  transform: translateY(-50%) scale(0.96);
+  transform: translateY(-50%) scale(1.05);
 }
 
 .portfolio-lightbox__nav:focus-visible {
   outline: 2px solid rgba(255, 255, 255, 0.8);
-  outline-offset: 2px;
+  outline-offset: 4px;
 }
 
 .portfolio-lightbox__nav--prev {
@@ -124,6 +125,10 @@
   .portfolio-lightbox__nav {
     width: 2.5rem;
     height: 2.5rem;
+  }
+
+  .portfolio-lightbox__nav:hover {
+    transform: translateY(-50%) scale(1.15);
   }
 
   .portfolio-lightbox__nav svg {
