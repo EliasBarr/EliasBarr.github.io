@@ -78,6 +78,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 5;
   width: 3rem;
   height: 3rem;
   padding: 0;
@@ -132,8 +133,10 @@
   }
 
   .portfolio-lightbox__nav {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    min-width: 44px;
+    min-height: 44px;
   }
 
   .portfolio-lightbox__nav:hover {
@@ -155,6 +158,8 @@
 }
 
 .portfolio-lightbox__image-wrap {
+  position: relative;
+  z-index: 1;
   max-width: 92vw;
   max-height: 88vh;
   display: flex;
