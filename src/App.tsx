@@ -12,6 +12,7 @@ import WeddingPage from './features/services/ui/pages/WeddingPage'
 import PeopleStudioPortraitsPage from './features/services/ui/pages/PeopleStudioPortraitsPage'
 import ProductPhotographyPage from './features/services/ui/pages/ProductPhotographyPage'
 import EventsPage from './features/services/ui/pages/EventsPage'
+import { APP_CONSTANTS } from './core/constants/appConstants'
 
 function AppContent() {
   const location = useLocation();
@@ -19,7 +20,7 @@ function AppContent() {
 
   return (
     <div className="App">
-      <TopBar title="PHARUS PHOTOGRAPHY" showBrand={!isHomePage} />
+      <TopBar title={APP_CONSTANTS.title} showBrand={!isHomePage} />
 
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -33,7 +34,7 @@ function AppContent() {
           </Routes>
           
       <Footer 
-        title="PHARUS PHOTOGRAPHY"
+        title={APP_CONSTANTS.title}
         showSocialIcons={true}
       />
     </div>
