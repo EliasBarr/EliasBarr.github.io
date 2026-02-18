@@ -1,10 +1,11 @@
-import React, { useEffect, useRef, useCallback } from 'react';
+import React, { useEffect, useRef, useCallback, useState } from 'react';
 import type { PortfolioItem } from '../../constants/portfolioData';
 import '../css/PortfolioLightbox.css';
 
 interface PortfolioLightboxProps {
   items: PortfolioItem[];
   currentIndex: number;
+  origin: { x: number; y: number } | null;
   onClose: () => void;
   onNavigate: (direction: 'prev' | 'next') => void;
 }
@@ -12,12 +13,20 @@ interface PortfolioLightboxProps {
 const PortfolioLightbox: React.FC<PortfolioLightboxProps> = ({
   items,
   currentIndex,
+  origin,
   onClose,
   onNavigate,
 }) => {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [useOriginForAnimation, setUseOriginForAnimation] = useState(!!origin);
   const hasMultiple = items.length > 1;
   const item = items[currentIndex];
+
+  const centerX = typeof window !== 'undefined' ? window.innerWidth / 2 : 0;
+  const centerY = typeof window !== 'undefined' ? window.innerHeight / 2 : 0;
+  const translateX = origin ? origin.x - centerX : 0;
+  const translateY = origin ? origin.y - centerY : 0;
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) onClose();
@@ -42,10 +51,26 @@ const PortfolioLightbox: React.FC<PortfolioLightboxProps> = ({
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     closeButtonRef.current?.focus();
+    const raf = requestAnimationFrame(() => {
+      requestAnimationFrame(() => setIsOpen(true));
+    });
     return () => {
+      cancelAnimationFrame(raf);
       document.body.style.overflow = '';
     };
   }, []);
+
+  const isFirstMount = useRef(true);
+  useEffect(() => {
+    if (isFirstMount.current) {
+      isFirstMount.current = false;
+      return;
+    }
+    setUseOriginForAnimation(false);
+    setIsOpen(false);
+    const t = setTimeout(() => setIsOpen(true), 25);
+    return () => clearTimeout(t);
+  }, [currentIndex]);
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
@@ -109,7 +134,21 @@ const PortfolioLightbox: React.FC<PortfolioLightboxProps> = ({
           </button>
         )}
 
-        <div className="portfolio-lightbox__image-wrap" onClick={(e) => e.stopPropagation()}>
+        <div
+          className={`portfolio-lightbox__image-wrap${isOpen ? ' portfolio-lightbox__image-wrap--open' : ''}`}
+          style={
+            !isOpen
+              ? {
+                  transform: useOriginForAnimation
+                    ? `translate(${translateX}px, ${translateY}px) scale(0.35)`
+                    : 'translate(0, 0) scale(0.92)',
+                  opacity: useOriginForAnimation ? 0.85 : 0.7,
+                  transition: 'none',
+                }
+              : undefined
+          }
+          onClick={(e) => e.stopPropagation()}
+        >
           <img
             src={item.img}
             alt=""
