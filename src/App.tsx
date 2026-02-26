@@ -8,6 +8,7 @@ import HomePage from './features/home/ui/pages/HomePage'
 import AboutUsPage from './features/about_us/ui/pages/AboutUsPage'
 import ServicesPage from './features/services/ui/pages/ServicesPage'
 import PortfolioPage from './features/portfolio/ui/pages/PortfolioPage'
+import PortfolioCategoryPage from './features/portfolio/ui/pages/PortfolioCategoryPage'
 import Footer from './core/common/ui/components/Footer'
 import WeddingPage from './features/services/ui/pages/WeddingPage'
 import PeopleStudioPortraitsPage from './features/services/ui/pages/PeopleStudioPortraitsPage'
@@ -15,10 +16,10 @@ import ProductPhotographyPage from './features/services/ui/pages/ProductPhotogra
 import EventsPage from './features/services/ui/pages/EventsPage'
 import { APP_CONSTANTS } from './core/constants/appConstants'
 import { preloadPortfolioImages } from './core/utils/preloadPortfolioImages'
-import { PORTFOLIO_DATA } from './features/home/constants/portfolioData'
+import { ALL_PORTFOLIO_IMAGE_PATHS } from './features/portfolio/constants/portfolioAssets'
 
 function preloadPortfolio(): void {
-  preloadPortfolioImages(PORTFOLIO_DATA.map((item) => item.img))
+  preloadPortfolioImages(ALL_PORTFOLIO_IMAGE_PATHS)
 }
 
 function AppContent() {
@@ -47,6 +48,10 @@ function AppContent() {
             <Route path="/about" element={<AboutUsPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
+            <Route path="/wedding-portfolio" element={<PortfolioCategoryPage />} />
+            <Route path="/family-portfolio" element={<PortfolioCategoryPage />} />
+            <Route path="/product-portfolio" element={<PortfolioCategoryPage />} />
+            <Route path="/event-portfolio" element={<PortfolioCategoryPage />} />
             <Route path="/services/weddings" element={<WeddingPage />} />
             <Route path="/people-studio-portraits" element={<PeopleStudioPortraitsPage />} />
             <Route path="/product-photography" element={<ProductPhotographyPage />} />

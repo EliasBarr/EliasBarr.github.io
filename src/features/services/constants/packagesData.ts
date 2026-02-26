@@ -170,25 +170,29 @@ export const peopleStudioPortraitsPackages: PromoCardData[] = [
 
 export const serviceCardData: CardModel[] = [
   {
-    imagePath: weddingImage,
     title: 'Weddings',
-    description: 'Where every glance becomes an eternal memory'
+    description: 'Where every glance becomes an eternal memory',
+    previewImage: weddingImage,
+    link: '/services/weddings',
   },
   {
-    imagePath: coupleImage,
     title: 'Family Sessions, Individual or Couple Studio Portraits',
-    description: 'The most valuable portrait is the one that tells your story'
+    description: 'The most valuable portrait is the one that tells your story',
+    previewImage: coupleImage,
+    link: '/people-studio-portraits',
   },
   {
-    imagePath: paprikaImage,
     title: 'Product Photography',
-    description: 'Let your brand speak without saying a word'
+    description: 'Let your brand speak without saying a word',
+    previewImage: paprikaImage,
+    link: '/product-photography',
   },
   {
-    imagePath: cupsImage,
-    title: 'Social Media Management',
-    description: 'Turning your brand into a story everyone wants to follow'
-  }
+    title: 'Events',
+    description: 'Turning your brand into a story everyone wants to follow',
+    previewImage: cupsImage,
+    link: '/events',
+  },
 ];
 
 // ==================== AGGREGATED DATA ====================

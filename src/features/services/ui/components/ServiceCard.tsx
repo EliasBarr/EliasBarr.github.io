@@ -11,30 +11,17 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({ card, index }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const getRoute = () => {
-    if (index === 1) {
-      return '/people-studio-portraits';
-    }
-    if (index === 2) {
-      return '/product-photography';
-    }
-
-    if (index === 3) {
-      return '/events';
-    }
-    return `/services/${card.title.toLowerCase()}`;
-  };
 
   return (
     <Link 
-      to={getRoute()}
+      to={card.link || `/services/${card.title.toLowerCase()}`}
       className="service-card"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="card-image-container">
         <img 
-          src={card.imagePath} 
+          src={card.previewImage} 
           alt={card.title} 
           className={`card-image ${isHovered ? 'image-hovered' : ''}`}
         />

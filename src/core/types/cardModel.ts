@@ -2,7 +2,7 @@
 export interface CardModel {
   title: string;
   description: string;
-  imagePath: string;
+  previewImage: string;
   link?: string;
-  images?: string[];
+  gallery?: string[];
 }

@@ -32,7 +32,6 @@ import event29 from '../../../assets/portfolio/events/event29.jpg';
 import event30 from '../../../assets/portfolio/events/event30.jpg';
 import event31 from '../../../assets/portfolio/events/event31.jpg';
 import event32 from '../../../assets/portfolio/events/event32.jpg';
-import event33 from '../../../assets/portfolio/events/event33.jpg';
 
 /* family */
 import familyMain from '../../../assets/portfolio/family/main.jpg';
@@ -60,7 +59,6 @@ import family21 from '../../../assets/portfolio/family/family21.jpg';
 import family22 from '../../../assets/portfolio/family/family22.jpg';
 import family23 from '../../../assets/portfolio/family/family23.jpg';
 import family24 from '../../../assets/portfolio/family/family24.jpg';
-import family25 from '../../../assets/portfolio/family/family25.jpg';
 
 /* products */
 import productsMain from '../../../assets/portfolio/products/main.jpg';
@@ -95,7 +93,6 @@ import product28 from '../../../assets/portfolio/products/product28.jpg';
 import product29 from '../../../assets/portfolio/products/product29.jpg';
 import product30 from '../../../assets/portfolio/products/product30.jpg';
 import product31 from '../../../assets/portfolio/products/product31.jpg';
-import product32 from '../../../assets/portfolio/products/product32.jpg';
 
 /* weddings */
 import weddingsMain from '../../../assets/portfolio/weddings/main.jpg';
@@ -139,18 +136,18 @@ export const PORTFOLIO_IMAGE_PATHS = {
     event1, event2, event3, event4, event5, event6, event7, event8, event9,
     event10, event11, event12, event13, event14, event15, event16, event17, event18, event19,
     event20, event21, event22, event23, event24, event25, event26, event27, event28, event29,
-    event30, event31, event32, event33,
+    event30, event31, event32,
   ],
   family: [
     family1, family2, family3, family4, family5, family6, family7, family8, family9,
     family10, family11, family12, family13, family14, family15, family16, family17, family18, family19,
-    family20, family21, family22, family23, family24, family25,
+    family20, family21, family22, family23, family24,
   ],
   products: [
     product1, product2, product3, product4, product5, product6, product7, product8, product9,
     product10, product11, product12, product13, product14, product15, product16, product17, product18, product19,
     product20, product21, product22, product23, product24, product25, product26, product27, product28, product29,
-    product30, product31, product32,
+    product30, product31,
   ],
   weddings: [
     wedding1, wedding2, wedding3, wedding4, wedding5, wedding6, wedding7, wedding8, wedding9,
