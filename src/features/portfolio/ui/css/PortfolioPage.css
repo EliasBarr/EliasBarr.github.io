@@ -21,9 +21,23 @@
   text-transform: uppercase;
 }
 
-/* Override PortfolioSection background for this page */
-.portfolio-page .portfolio-section {
-  background: transparent;
+.portfolio-page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+  width: 100%;
+}
+
+.portfolio-page .services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.portfolio-page .services-grid .service-card {
+  width: 100%;
+  height: 400px;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -39,6 +53,16 @@
   .portfolio-page-title {
     font-size: 2.5rem;
   }
+
+  .portfolio-page .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  .portfolio-page-content {
+    padding: 0 1rem 3rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -48,6 +72,10 @@
   
   .portfolio-page-title {
     font-size: 2rem;
+  }
+
+  .portfolio-page-content {
+    padding: 0 1rem 2rem;
   }
 }
 
