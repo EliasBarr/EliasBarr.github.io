@@ -1,6 +1,6 @@
 import './App.css'
 import './fonts.css'
-import { useEffect } from 'react'
+import { useCallback } from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { AppProvider } from './core/contexts/AppContext'
 import TopBar from './core/common/ui/components/TopBar'
@@ -15,30 +15,20 @@ import PeopleStudioPortraitsPage from './features/services/ui/pages/PeopleStudio
 import ProductPhotographyPage from './features/services/ui/pages/ProductPhotographyPage'
 import EventsPage from './features/services/ui/pages/EventsPage'
 import { APP_CONSTANTS } from './core/constants/appConstants'
+import { usePreloadImages } from './core/hooks/usePreloadImages'
 import { preloadPortfolioImages } from './core/utils/preloadPortfolioImages'
 import { ALL_PORTFOLIO_IMAGE_PATHS } from './features/portfolio/constants/portfolioAssets'
 import { ALL_HOME_IMAGE_PATHS } from './features/home/constants/homeAssets'
-
-function preloadPortfolio(): void {
-  preloadPortfolioImages([...ALL_PORTFOLIO_IMAGE_PATHS, ...ALL_HOME_IMAGE_PATHS])
-}
 
 function AppContent() {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
-  useEffect(() => {
-    const handle = window.requestIdleCallback
-      ? window.requestIdleCallback(() => preloadPortfolio(), { timeout: 2000 })
-      : window.setTimeout(preloadPortfolio, 300);
-    return () => {
-      if (window.cancelIdleCallback) {
-        window.cancelIdleCallback(handle as number);
-      } else {
-        window.clearTimeout(handle as number);
-      }
-    };
+  const preloadPortfolio = useCallback(() => {
+    preloadPortfolioImages([...ALL_PORTFOLIO_IMAGE_PATHS, ...ALL_HOME_IMAGE_PATHS]);
   }, []);
+
+  usePreloadImages(preloadPortfolio);
 
   return (
     <div className="App">
