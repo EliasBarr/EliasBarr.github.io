@@ -12,55 +12,29 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 5rem 2rem 4rem;
+  padding: 3rem 2rem 2rem;
   width: 100%;
 }
 
-.portfolio-page-back {
-  flex-shrink: 0;
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  border: none;
-  background: transparent;
-  color: #ffffff;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.2s ease;
-}
-
-.portfolio-page-back:hover {
-  opacity: 0.8;
-}
-
-.portfolio-page-back:focus-visible {
-  outline: 2px solid #ffffff;
-  outline-offset: 2px;
-}
-
 .portfolio-page-title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   font-size: 3.5rem;
   font-weight: 400;
   color: #FFFFFF;
   margin: 0;
   text-transform: uppercase;
-  pointer-events: none;
+  max-width: 100%;
+  overflow: visible;
+  line-height: 1.2;
 }
 
-/* Página principal de portfolio: título en flujo con margen arriba/abajo */
+/* Título centrado (página principal y categorías) */
 .portfolio-page-header--main {
   justify-content: center;
 }
 
 .portfolio-page-header--main .portfolio-page-title {
-  position: static;
-  transform: none;
-  margin: 2.5rem 0 4rem 0;
+  text-align: center;
+  margin: 1rem 0 1.5rem 0;
 }
 
 .portfolio-page-content {
@@ -68,6 +42,11 @@
   margin: 0 auto;
   padding: 0 2rem 4rem;
   width: 100%;
+}
+
+/* PortfolioSection dentro de portfolio-page: menos padding para unificar con el header */
+.portfolio-page .portfolio-section {
+  padding: 2rem 0 4rem 0;
 }
 
 .portfolio-page .services-grid {
@@ -89,7 +68,15 @@
   }
   
   .portfolio-page-header {
-    padding: 3rem 1.5rem 1.5rem;
+    padding: 2.5rem 1.5rem 1.5rem;
+  }
+  
+  .portfolio-page .portfolio-section {
+    padding: 1.5rem 0 3rem 0;
+  }
+  
+  .portfolio-page-header--main .portfolio-page-title {
+    font-size: 2.5rem;
   }
   
   .portfolio-page-title {
@@ -110,6 +97,14 @@
 @media (max-width: 480px) {
   .portfolio-page-header {
     padding: 2rem 1rem 1rem;
+  }
+  
+  .portfolio-page .portfolio-section {
+    padding: 1rem 0 2.5rem 0;
+  }
+  
+  .portfolio-page-header--main .portfolio-page-title {
+    font-size: 2rem;
   }
   
   .portfolio-page-title {
