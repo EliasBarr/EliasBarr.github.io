@@ -243,6 +243,11 @@
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
+/* Close icon (X) always white when menu is open */
+.topbar .mobile-menu-toggle .hamburger-line.active {
+  background-color: #FFFFFF;
+}
+
 .mobile-nav {
   position: fixed;
   top: 0;
@@ -253,7 +258,7 @@
   backdrop-filter: blur(10px);
   z-index: 1000;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   transform: translateX(100%);
   transition: transform 0.3s ease;
@@ -261,6 +266,22 @@
 
 .mobile-nav.open {
   transform: translateX(0);
+}
+
+.mobile-nav-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 2rem 0;
+  box-sizing: border-box;
+}
+
+.mobile-nav-inner .mobile-nav-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .mobile-nav-list {
@@ -271,6 +292,34 @@
   flex-direction: column;
   gap: 2rem;
   text-align: center;
+}
+
+.mobile-nav-social {
+  margin-top: auto;
+  padding-bottom: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-nav-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  transition: opacity 0.2s ease;
+  padding: 0.5rem;
+}
+
+.mobile-nav-social-link:hover {
+  opacity: 0.8;
+}
+
+.mobile-nav-social-link svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
 }
 
 .mobile-nav-link {
@@ -287,9 +336,10 @@
   opacity: 0.8;
 }
 
-@media (max-width: 640px) {
+/* Tablet + Mobile: hamburger menu and logo (no desktop nav in bar) */
+@media (max-width: 1023px) {
   .topbar-nav {
-    display: none; /* Hide navigation on mobile */
+    display: none;
   }
   
   .mobile-menu-toggle {
@@ -301,9 +351,12 @@
   }
   
   .topbar-social {
-    display: none; /* Hide social icons on mobile */
+    display: none;
   }
-  
+}
+
+/* Mobile: smaller logo and brand */
+@media (max-width: 640px) {
   .topbar-brand {
     left: 1rem;
     gap: 0.5rem;
@@ -363,6 +416,10 @@
 .topbar.scrolled .social-link:hover svg {
   color: #000000 !important;
   fill: #000000 !important;
+}
+
+.topbar.scrolled .hamburger-line {
+  background-color: #000000;
 }
 
 /* ===== NOT HERO STYLES ===== */
