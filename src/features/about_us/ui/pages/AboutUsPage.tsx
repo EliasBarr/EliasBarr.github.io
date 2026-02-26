@@ -1,7 +1,7 @@
 import React from 'react';
 import AboutUs from '../components/AboutUs';
 import { SOCIAL_LINKS } from '../../../../core/constants/contactInfo';
-
+import aboutUsImage from '../../../../assets/about_us.png';
 
 const AboutUsPage: React.FC = () => {
   const handleContactClick = () => {
@@ -15,7 +15,7 @@ const AboutUsPage: React.FC = () => {
         description="Pharus Creative is a studio specializing in photography, video production, content creation, and digital marketing. We illuminate emotion, build identity, and leave a mark. Our inspiration comes from a personal journey, and we are based in Montreal."
         buttonText="Contact Me"
         onButtonClick={handleContactClick}
-        imageUrl="src/assets/about_us.png"
+        imageUrl={aboutUsImage}
         imageAlt="Gai cat - About me image"
       />
     </div>

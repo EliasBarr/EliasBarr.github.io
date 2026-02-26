@@ -27,7 +27,8 @@ const TopBar: React.FC<TopBarProps> = ({
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   const isPortfolioPage = location.pathname === '/portfolio';
-  const showBrandVisible = !isDesktop;
+  const isTopBarLight = isScrolled || !isHero;
+  const showBrandVisible = !isDesktop && isTopBarLight;
 
   return (
     <header className={`topbar ${isScrolled ? 'scrolled' : ''} ${!isHero ? 'not-hero' : ''} ${isPortfolioPage ? 'portfolio-mode' : ''}`}>

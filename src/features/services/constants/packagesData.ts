@@ -1,7 +1,14 @@
 import weddingImage from '../../../assets/wedding_service.png';
 import coupleImage from '../../../assets/family_session_service.png';
 import paprikaImage from '../../../assets/product_photo_service.png';
-import cupsImage from '../../../assets/cups.png';
+import cupsImage from '../../../assets/cups_banner.png';
+import couplePng from '../../../assets/couple.png';
+import weddingPng from '../../../assets/wedding.png';
+import weddingBannerPng from '../../../assets/wedding_banner_page.png';
+import cupsBannerPng from '../../../assets/cups_banner.png';
+import paprikaPng from '../../../assets/paprika.png';
+import familySessionBannerPng from '../../../assets/family_session_banner_page.png';
+import gaiCatPng from '../../../assets/about_us.png';
 
 // ==================== INTERFACES ====================
 
@@ -40,7 +47,7 @@ export const weddingPackages: PromoCardData[] = [
       "Delivery via online gallery within 1 to 2 weeks"
     ],
     price: ["$300 CAD"],
-    imagePath: "/src/assets/couple.png"
+    imagePath: couplePng
   },
   {
     title: "Timeless Story",
@@ -54,7 +61,7 @@ export const weddingPackages: PromoCardData[] = [
       "Delivery via online gallery within 1 to 2 weeks"
     ],
     price: ["$600 CAD"],
-    imagePath: "/src/assets/wedding.png"
+    imagePath: weddingPng
   },
   {
     title: "Eternal Love",
@@ -72,7 +79,7 @@ export const weddingPackages: PromoCardData[] = [
       "Delivery of wedding day photos within 1 to 2 weeks"
     ],
     price: ["$1,500 CAD"],
-    imagePath: "/src/assets/wedding_banner.png"
+    imagePath: weddingBannerPng
   }
 ];
 
@@ -90,7 +97,7 @@ export const productPhotographyPackages: PromoCardData[] = [
       "1 creative session, scheduled in advance."
     ],
     price: ["$300 CAD"],
-    imagePath: "/src/assets/cups.png"
+    imagePath: cupsImage
   },
   {
     title: "Clear Vision",
@@ -104,7 +111,7 @@ export const productPhotographyPackages: PromoCardData[] = [
       "Up to 2 scheduled creative sessions."
     ],
     price: ["$450 CAD"],
-    imagePath: "/src/assets/cups_banner.png"
+    imagePath: cupsBannerPng
   },
   {
     title: "Creative Beacon",
@@ -118,7 +125,7 @@ export const productPhotographyPackages: PromoCardData[] = [
       "2 to 3 tailored sessions according to project goals."
     ],
     price: ["$750 CAD"],
-    imagePath: "/src/assets/paprika.png"
+    imagePath: paprikaPng
   }
 ];
 
@@ -137,7 +144,7 @@ export const peopleStudioPortraitsPackages: PromoCardData[] = [
       "*Additional people can be included for an extra fee"
     ],
     price: ["$250 CAD"],
-    imagePath: "/src/assets/family_session_banner.png"
+    imagePath: familySessionBannerPng
   },
   {
     title: "Timeless Portrait",
@@ -150,7 +157,7 @@ export const peopleStudioPortraitsPackages: PromoCardData[] = [
       "Up to 6 people included"
     ],
     price: ["$400 CAD - Studio", "$450 CAD - On-Location"],
-    imagePath: "/src/assets/couple.png"
+    imagePath: couplePng
   },
   {
     title: "Legacy Portrait",
@@ -163,7 +170,7 @@ export const peopleStudioPortraitsPackages: PromoCardData[] = [
       "Up to 6 people included, with option to add more for an additional fee"
     ],
     price: ["$550 CAD - Studio", "$600 CAD - On-Location"],
-    imagePath: "/src/assets/gai_cat.png"
+    imagePath: gaiCatPng
   }
 ];
 

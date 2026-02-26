@@ -1,4 +1,7 @@
 import type { PromoCardData } from '../ui/interfaces/promoCard';
+import familySessionBannerImg from '../../../assets/family_session_banner_page.png';
+import coupleImg from '../../../assets/couple.png';
+import gaiCatImg from '../../../assets/about_us.png';
 
 export const peopleStudioPortraitsPackages: PromoCardData[] = [
   {
@@ -13,7 +16,7 @@ export const peopleStudioPortraitsPackages: PromoCardData[] = [
       "*Additional people can be included for an extra fee"
     ],
     price: ["$250 CAD"],
-    imagePath: "/src/assets/family_session_banner.png"
+    imagePath: familySessionBannerImg
   },
   {
     title: "Timeless Portrait",
@@ -26,7 +29,7 @@ export const peopleStudioPortraitsPackages: PromoCardData[] = [
       "Up to 6 people included"
     ],
     price: ["$400 CAD - Studio", "$450 CAD - On-Location"],
-    imagePath: "/src/assets/couple.png"
+    imagePath: coupleImg
   },
   {
     title: "Legacy Portrait",
@@ -39,6 +42,6 @@ export const peopleStudioPortraitsPackages: PromoCardData[] = [
       "Up to 6 people included, with option to add more for an additional fee"
     ],
     price: ["$550 CAD - Studio", "$600 CAD - On-Location"],
-    imagePath: "/src/assets/gai_cat.png"
+    imagePath: gaiCatImg
   }
 ];
