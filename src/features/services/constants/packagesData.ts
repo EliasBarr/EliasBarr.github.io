@@ -9,6 +9,7 @@ import cupsBannerPng from '../../../assets/cups_banner.png';
 import paprikaPng from '../../../assets/paprika.png';
 import familySessionBannerPng from '../../../assets/family_session_banner_page.png';
 import gaiCatPng from '../../../assets/about_us.png';
+import type { CardModel } from '../../../core/types/cardModel';
 
 // ==================== INTERFACES ====================
 
@@ -20,15 +21,6 @@ export interface PromoCardData {
   description: string;
   descriptionItems: string[];
   price: string[];
-  imagePath: string;
-}
-
-/**
- * Interface for service card data (simplified version)
- */
-export interface SocialMediaCard {
-  title: string;
-  description: string;
   imagePath: string;
 }
 
@@ -176,7 +168,7 @@ export const peopleStudioPortraitsPackages: PromoCardData[] = [
 
 // ==================== SERVICE CARDS ====================
 
-export const serviceCardData: SocialMediaCard[] = [
+export const serviceCardData: CardModel[] = [
   {
     imagePath: weddingImage,
     title: 'Weddings',

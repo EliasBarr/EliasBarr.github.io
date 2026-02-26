@@ -1,4 +1,5 @@
 /* events */
+import eventsMain from '../../../assets/portfolio/events/main.jpg';
 import event1 from '../../../assets/portfolio/events/event1.jpg';
 import event2 from '../../../assets/portfolio/events/event2.jpg';
 import event3 from '../../../assets/portfolio/events/event3.jpg';
@@ -34,6 +35,7 @@ import event32 from '../../../assets/portfolio/events/event32.jpg';
 import event33 from '../../../assets/portfolio/events/event33.jpg';
 
 /* family */
+import familyMain from '../../../assets/portfolio/family/main.jpg';
 import family1 from '../../../assets/portfolio/family/family1.jpg';
 import family2 from '../../../assets/portfolio/family/family2.jpg';
 import family3 from '../../../assets/portfolio/family/family3.jpg';
@@ -61,6 +63,7 @@ import family24 from '../../../assets/portfolio/family/family24.jpg';
 import family25 from '../../../assets/portfolio/family/family25.jpg';
 
 /* products */
+import productsMain from '../../../assets/portfolio/products/main.jpg';
 import product1 from '../../../assets/portfolio/products/product1.jpg';
 import product2 from '../../../assets/portfolio/products/product2.jpg';
 import product3 from '../../../assets/portfolio/products/product3.jpg';
@@ -95,6 +98,7 @@ import product31 from '../../../assets/portfolio/products/product31.jpg';
 import product32 from '../../../assets/portfolio/products/product32.jpg';
 
 /* weddings */
+import weddingsMain from '../../../assets/portfolio/weddings/main.jpg';
 import wedding1 from '../../../assets/portfolio/weddings/wedding1.jpg';
 import wedding2 from '../../../assets/portfolio/weddings/wedding2.jpg';
 import wedding3 from '../../../assets/portfolio/weddings/wedding3.jpg';
@@ -129,7 +133,6 @@ import wedding31 from '../../../assets/portfolio/weddings/wedding31.jpg';
 import wedding32 from '../../../assets/portfolio/weddings/wedding32.jpg';
 import wedding33 from '../../../assets/portfolio/weddings/wedding33.jpg';
 import wedding34 from '../../../assets/portfolio/weddings/wedding34.jpg';
-import wedding35 from '../../../assets/portfolio/weddings/wedding35.jpg';
 
 export const PORTFOLIO_IMAGE_PATHS = {
   events: [
@@ -153,8 +156,16 @@ export const PORTFOLIO_IMAGE_PATHS = {
     wedding1, wedding2, wedding3, wedding4, wedding5, wedding6, wedding7, wedding8, wedding9,
     wedding10, wedding11, wedding12, wedding13, wedding14, wedding15, wedding16, wedding17, wedding18, wedding19,
     wedding20, wedding21, wedding22, wedding23, wedding24, wedding25, wedding26, wedding27, wedding28, wedding29,
-    wedding30, wedding31, wedding32, wedding33, wedding34, wedding35,
+    wedding30, wedding31, wedding32, wedding33, wedding34,
   ],
+} as const;
+
+/** Imagen main de cada sección del portfolio (main.jpg en cada subfolder). */
+export const PORTFOLIO_MAIN_IMAGES = {
+  events: eventsMain,
+  family: familyMain,
+  products: productsMain,
+  weddings: weddingsMain,
 } as const;
 
 /** Todas las imágenes del portfolio en un solo array (events + family + products + weddings). */

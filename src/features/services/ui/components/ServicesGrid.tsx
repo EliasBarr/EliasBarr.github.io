@@ -1,10 +1,10 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
-import type { SocialMediaCard } from '../../interfaces/socialMedia';
+import type { CardModel } from '../../../../core/types/cardModel';
 import '../css/ServicesGrid.css';
 
 interface ServicesGridProps {
-  cards: SocialMediaCard[];
+  cards: CardModel[];
 }
 
 const ServicesGrid: React.FC<ServicesGridProps> = ({ cards }) => {

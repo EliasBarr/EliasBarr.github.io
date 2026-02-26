@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import type { SocialMediaCard } from '../../interfaces/socialMedia';
+import type { CardModel } from '../../../../core/types/cardModel';
 import '../css/ServiceCard.css';   
 
 interface ServiceCardProps {
-  card: SocialMediaCard;
+  card: CardModel;
   index: number;
 }
 
