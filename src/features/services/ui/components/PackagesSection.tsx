@@ -1,8 +1,9 @@
 import React from 'react';
 import PromoCard from './PromoCard';
-import ImageGallery from './ImageGallery';
 import type { PromoCardData } from '../interfaces/promoCard';
 import { useIsDesktop } from '../../../../core/common/hooks/useMediaQuery';
+import PortfolioSection from '../../../home/ui/components/PortfolioSection';
+import type { PortfolioItem } from '../../../home/constants/portfolioData';
 import '../css/PackagesSection.css';
 
 interface PackagesSectionProps {
@@ -12,7 +13,10 @@ interface PackagesSectionProps {
 const PackagesSection: React.FC<PackagesSectionProps> = ({ packages }) => {
   const isDesktop = useIsDesktop();
 
-  const allImages = packages.map(pkg => pkg.imagePath);
+  const portfolioItems: PortfolioItem[] = packages.map((pkg) => ({
+    img: pkg.imagePath,
+    title: pkg.title,
+  }));
 
   return (
     <div className="packages-section">
@@ -24,9 +28,10 @@ const PackagesSection: React.FC<PackagesSectionProps> = ({ packages }) => {
           isLast={index === packages.length - 1}
         />
       ))}
-      
 
-      {!isDesktop && <ImageGallery images={allImages} cols={2} gap={8} />}
+      {!isDesktop && (
+        <PortfolioSection customItems={portfolioItems} isPreview={false} />
+      )}
     </div>
   );
 };

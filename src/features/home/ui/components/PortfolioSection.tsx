@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { PORTFOLIO_DATA } from '../../constants/portfolioData';
+import type { PortfolioItem } from '../../constants/portfolioData';
 import { Button } from '../../../../core/common/ui/components';
 import { useIsMobile, useIsTablet } from '../../../../core/common/hooks/useMediaQuery';
 import PortfolioImageItem from './PortfolioImageItem';
@@ -14,11 +15,14 @@ import '../css/PortfolioSection.css';
 interface PortfolioSectionProps {
   title?: string;
   isPreview: boolean;
+  /** When provided, show these items instead of PORTFOLIO_DATA (e.g. package images in services). */
+  customItems?: PortfolioItem[];
 }
 
-const PortfolioSection: React.FC<PortfolioSectionProps> = ({ isPreview }) => {
+const PortfolioSection: React.FC<PortfolioSectionProps> = ({ isPreview, customItems }) => {
   const PREVIEW_LIMIT = 11;
-  const displayData = isPreview ? PORTFOLIO_DATA.slice(0, PREVIEW_LIMIT) : PORTFOLIO_DATA;
+  const displayData =
+    customItems ?? (isPreview ? PORTFOLIO_DATA.slice(0, PREVIEW_LIMIT) : PORTFOLIO_DATA);
   const navigate = useNavigate();
   const isMobile = useIsMobile();
   const isTablet = useIsTablet();
@@ -77,7 +81,7 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ isPreview }) => {
             document.body
           )}
         
-        {isPreview && (
+        {isPreview && !customItems && (
           <div className="portfolio-button-container">
             <Button 
               text="View My Portfolio"
