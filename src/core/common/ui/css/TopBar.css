@@ -365,6 +365,10 @@
   fill: #000000 !important;
 }
 
+.topbar.scrolled .hamburger-line {
+  background-color: #000000;
+}
+
 /* ===== NOT HERO STYLES ===== */
 .topbar.not-hero {
   background: #FFFFFF;

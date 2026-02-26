@@ -26,11 +26,13 @@ const TopBar: React.FC<TopBarProps> = ({
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   const isPortfolioPage = location.pathname === '/portfolio';
+  const isHomePage = location.pathname === '/';
+  const showBrandVisible = showBrand || (isHomePage && isScrolled);
 
   return (
     <header className={`topbar ${isScrolled ? 'scrolled' : ''} ${!isHero ? 'not-hero' : ''} ${isPortfolioPage ? 'portfolio-mode' : ''}`}>
       <div className="topbar-container">
-        {showBrand && (
+        {showBrandVisible && (
           <Link to="/" className="topbar-brand">
             <img src={pharusLogoBlack} alt="Pharus Creative Logo" className="topbar-logo" />
             <div className="topbar-brand-text">
