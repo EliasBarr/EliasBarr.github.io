@@ -9,20 +9,24 @@ export const portfolioCardData: SocialMediaCard[] = [
     title: 'Weddings',
     imagePath: weddingImage,
     description: 'Where every glance becomes an eternal memory',
+    link: '/wedding-portfolio',
   },
   {
     title: 'Family Sessions, Individual or Couple Studio Portraits',
     imagePath: coupleImage,
     description: 'The most valuable portrait is the one that tells your story',
+    link: '/family-portfolio',
   },
   {
     title: 'Product Photography',
     imagePath: paprikaImage,
     description: 'Let your brand speak without saying a word',
+    link: '/product-portfolio',
   },
   {
     title: 'Events',
     imagePath: eventsImage,
     description: 'To be determined',
+    link: '/event-portfolio',
   },
 ];
