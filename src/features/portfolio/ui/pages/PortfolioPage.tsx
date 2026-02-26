@@ -6,7 +6,7 @@ import '../css/PortfolioPage.css';
 const PortfolioPage: React.FC = () => {
   return (
     <main className="portfolio-page">
-      <div className="portfolio-page-header">
+      <div className="portfolio-page-header portfolio-page-header--main">
         <h1 className="portfolio-page-title font-heading">PORTFOLIO</h1>
       </div>
       <div className="portfolio-page-content">
