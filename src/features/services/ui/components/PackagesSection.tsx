@@ -30,7 +30,7 @@ const PackagesSection: React.FC<PackagesSectionProps> = ({ packages }) => {
       ))}
 
       {!isDesktop && (
-        <PortfolioSection customItems={portfolioItems} isPreview={false} />
+        <PortfolioSection customItems={portfolioItems} />
       )}
     </div>
   );

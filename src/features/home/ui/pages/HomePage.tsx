@@ -45,7 +45,7 @@ const HomePage: React.FC = () => {
         imageAlt="Wedding couple embrace"
       />
       
-      <PortfolioSection isPreview={true} />
+      <PortfolioSection />
       
       <LetsContact 
         title="Let's Connect"

@@ -14,15 +14,12 @@ import '../css/PortfolioSection.css';
 
 interface PortfolioSectionProps {
   title?: string;
-  isPreview: boolean;
   /** When provided, show these items instead of PORTFOLIO_DATA (e.g. package images in services). */
   customItems?: PortfolioItem[];
 }
 
-const PortfolioSection: React.FC<PortfolioSectionProps> = ({ isPreview, customItems }) => {
-  const PREVIEW_LIMIT = 11;
-  const displayData =
-    customItems ?? (isPreview ? PORTFOLIO_DATA.slice(0, PREVIEW_LIMIT) : PORTFOLIO_DATA);
+const PortfolioSection: React.FC<PortfolioSectionProps> = ({ customItems }) => {
+  const displayData = customItems ?? PORTFOLIO_DATA;
   const navigate = useNavigate();
   const isMobile = useIsMobile();
   const isTablet = useIsTablet();
@@ -56,11 +53,10 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ isPreview, customIt
       <div className="portfolio-container">
         <Box sx={{ width: '100%' }}>
           <ImageList variant="masonry" cols={cols} gap={8}>
-            {displayData.map((item, index) => (
+            {displayData.map((item: PortfolioItem, index: number) => (
               <ImageListItem key={item.img}>
                 <PortfolioImageItem
                   item={item}
-                  isPreview={isPreview}
                   isMobile={isMobile}
                   onClick={(e) => openLightbox(index, e)}
                 />
@@ -81,7 +77,7 @@ const PortfolioSection: React.FC<PortfolioSectionProps> = ({ isPreview, customIt
             document.body
           )}
         
-        {isPreview && !customItems && (
+        {!customItems && (
           <div className="portfolio-button-container">
             <Button 
               text="View My Portfolio"

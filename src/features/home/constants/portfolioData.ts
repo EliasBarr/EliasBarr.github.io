@@ -1,12 +1,12 @@
-import { ALL_PORTFOLIO_IMAGE_PATHS } from '../../portfolio/constants/portfolioAssets';
+import { ALL_HOME_IMAGE_PATHS } from './homeAssets';
 
 export interface PortfolioItem {
   img: string;
   title: string;
 }
 
-/** Portfolio images for home preview and legacy use; source: assets/portfolio (events, family, products, weddings). */
-export const PORTFOLIO_DATA: PortfolioItem[] = ALL_PORTFOLIO_IMAGE_PATHS.map((img, i) => ({
+/** Imágenes del portfolio mostrado en la home (preview); source: assets/home. */
+export const PORTFOLIO_DATA: PortfolioItem[] = ALL_HOME_IMAGE_PATHS.map((img, i) => ({
   img,
   title: `Portfolio ${i + 1}`,
 }));

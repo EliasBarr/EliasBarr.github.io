@@ -4,14 +4,12 @@ import '../css/PortfolioImageItem.css';
 
 interface PortfolioImageItemProps {
   item: PortfolioItem;
-  isPreview: boolean;
   isMobile: boolean;
   onClick: (e?: React.MouseEvent) => void;
 }
 
 const PortfolioImageItem: React.FC<PortfolioImageItemProps> = ({
   item,
-  isPreview,
   isMobile,
   onClick,
 }) => {
@@ -31,11 +29,11 @@ const PortfolioImageItem: React.FC<PortfolioImageItemProps> = ({
       onKeyDown={handleKeyDown}
       aria-label={`Ver imagen: ${item.title}`}
     >
-      <div className={isPreview ? undefined : 'portfolio-image-wrap'}>
+      <div className="portfolio-image-wrap">
         <img
           src={item.img}
           alt={item.title}
-          loading={isPreview ? 'lazy' : 'eager'}
+          loading="lazy"
           style={{
             maxWidth: '100%',
             height: 'auto',

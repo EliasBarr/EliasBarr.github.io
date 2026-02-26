@@ -26,7 +26,7 @@ const PortfolioCategoryPage: React.FC = () => {
         <h1 className="portfolio-page-title font-heading">{card.title.toUpperCase()}</h1>
       </div>
       <div className="portfolio-page-content">
-        <PortfolioSection customItems={customItems} isPreview={false} />
+        <PortfolioSection customItems={customItems} />
       </div>
     </main>
   );
