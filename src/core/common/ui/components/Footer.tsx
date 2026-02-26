@@ -6,21 +6,23 @@ import pharusLogoBlack from '../../../../assets/pharus_logo_black.png';
 import pharusLogoWhite from '../../../../assets/pharus_creative_logo.png';
 import { APP_CONSTANTS } from '../../../constants/appConstants';
 
+const PORTFOLIO_PATHS = ['/portfolio', '/wedding-portfolio', '/family-portfolio', '/product-portfolio', '/event-portfolio'];
+
 interface FooterProps {
   title?: string;
   showSocialIcons?: boolean;
 }
 
-const Footer: React.FC<FooterProps> = ({ 
+const Footer: React.FC<FooterProps> = ({
   title = APP_CONSTANTS.title,
-  showSocialIcons = true
+  showSocialIcons = true,
 }) => {
   const location = useLocation();
-  const isPortfolioPage = location.pathname === '/portfolio';
-  const pharusLogo = isPortfolioPage ? pharusLogoWhite : pharusLogoBlack;
+  const isPortfolio = PORTFOLIO_PATHS.includes(location.pathname);
+  const pharusLogo = isPortfolio ? pharusLogoWhite : pharusLogoBlack;
 
   return (
-    <footer className={`footer ${isPortfolioPage ? 'portfolio-mode' : ''}`}>
+    <footer className={`footer ${isPortfolio ? 'portfolio-mode' : ''}`}>
 
 
       <div className="footer-navigation">

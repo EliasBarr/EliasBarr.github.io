@@ -7,6 +7,8 @@ import { SOCIAL_LINKS } from '../../../constants/contactInfo';
 import pharusLogoBlack from '../../../../assets/pharus_logo_black.png';
 import '../css/TopBar.css';
 
+const PORTFOLIO_PATHS = ['/portfolio', '/wedding-portfolio', '/family-portfolio', '/product-portfolio', '/event-portfolio'];
+
 interface TopBarProps {
   title?: string;
   showNavigation?: boolean;
@@ -26,8 +28,8 @@ const TopBar: React.FC<TopBarProps> = ({
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
-  const isPortfolioPage = location.pathname === '/portfolio';
-  const isTopBarLight = isScrolled || !isHero;
+  const isPortfolioPage = PORTFOLIO_PATHS.includes(location.pathname);
+  const isTopBarLight = isScrolled || !isHero || isPortfolioPage;
   const showBrandVisible = !isDesktop && isTopBarLight;
 
   return (
