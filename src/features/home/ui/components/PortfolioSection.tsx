@@ -4,13 +4,13 @@ import { useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import { PORTFOLIO_DATA } from '../../constants/portfolioData';
-import type { PortfolioItem } from '../../constants/portfolioData';
+
 import { Button } from '../../../../core/common/ui/components';
 import { useIsMobile, useIsTablet } from '../../../../core/common/hooks/useMediaQuery';
 import PortfolioImageItem from './PortfolioImageItem';
 import PortfolioLightbox from './PortfolioLightbox';
 import '../css/PortfolioSection.css';
+import { PORTFOLIO_DATA, type PortfolioItem } from '../../constants/portfolioData';
 
 interface PortfolioSectionProps {
   title?: string;
