@@ -17,9 +17,10 @@ import EventsPage from './features/services/ui/pages/EventsPage'
 import { APP_CONSTANTS } from './core/constants/appConstants'
 import { preloadPortfolioImages } from './core/utils/preloadPortfolioImages'
 import { ALL_PORTFOLIO_IMAGE_PATHS } from './features/portfolio/constants/portfolioAssets'
+import { ALL_HOME_IMAGE_PATHS } from './features/home/constants/homeAssets'
 
 function preloadPortfolio(): void {
-  preloadPortfolioImages(ALL_PORTFOLIO_IMAGE_PATHS)
+  preloadPortfolioImages([...ALL_PORTFOLIO_IMAGE_PATHS, ...ALL_HOME_IMAGE_PATHS])
 }
 
 function AppContent() {

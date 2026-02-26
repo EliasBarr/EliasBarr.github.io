@@ -19,7 +19,7 @@ interface PortfolioSectionProps {
 }
 
 const PortfolioSection: React.FC<PortfolioSectionProps> = ({ customItems }) => {
-  const displayData = customItems ?? PORTFOLIO_DATA;
+  const displayData = (customItems ?? PORTFOLIO_DATA).slice().reverse();
   const navigate = useNavigate();
   const isMobile = useIsMobile();
   const isTablet = useIsTablet();
