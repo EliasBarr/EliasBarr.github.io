@@ -5,10 +5,9 @@ import '../css/ServiceCard.css';
 
 interface ServiceCardProps {
   card: CardModel;
-  index: number;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ card, index }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ card }) => {
   const [isHovered, setIsHovered] = useState(false);
 
 

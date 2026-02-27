@@ -7,22 +7,26 @@ import eventsImage from '../../../assets/events.png';
 export const serviceCardData: CardModel[] = [
   {
     title: 'Weddings',
-    imagePath: weddingImage,
-    description: 'Where every glance becomes an eternal memory'
+    previewImage: weddingImage,
+    description: 'Where every glance becomes an eternal memory',
+    link: '/services/weddings',
   },
   {
     title: 'Family Sessions, Individual or Couple Studio Portraits',
-    imagePath: coupleImage,
-    description: 'The most valuable portrait is the one that tells your story'
+    previewImage: coupleImage,
+    description: 'The most valuable portrait is the one that tells your story',
+    link: '/people-studio-portraits',
   },
   {
     title: 'Product Photography',
-    imagePath: paprikaImage,
-    description: 'Let your brand speak without saying a word'
+    previewImage: paprikaImage,
+    description: 'Let your brand speak without saying a word',
+    link: '/product-photography',
   },
   {
     title: 'Events',
-    imagePath: eventsImage,
-    description: 'To be determined'
+    previewImage: eventsImage,
+    description: 'To be determined',
+    link: '/events',
   }
 ];
