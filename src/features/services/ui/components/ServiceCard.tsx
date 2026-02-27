@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import type { CardModel } from '../../../../core/types/cardModel';
-import '../css/ServiceCard.css';   
+import { useIsDesktop } from '../../../../core/common/hooks/useMediaQuery';
+import '../css/ServiceCard.css';
 
 interface ServiceCardProps {
   card: CardModel;
@@ -9,14 +10,18 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ card }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const isDesktop = useIsDesktop();
 
+  useEffect(() => {
+    if (!isDesktop) setIsHovered(false);
+  }, [isDesktop]);
 
   return (
-    <Link 
+    <Link
       to={card.link || `/services/${card.title.toLowerCase()}`}
       className="service-card"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => isDesktop && setIsHovered(true)}
+      onMouseLeave={() => isDesktop && setIsHovered(false)}
     >
       <div className="card-image-container">
         <img 
