@@ -42,7 +42,7 @@ export const serviceCardData: CardModel[] = [
   {
     title: 'Events',
     previewImage: eventsImage,
-    description: 'To be determined',
+    description: 'From intimate DJ sets to full-scale nightlife experiences',
     link: '/events',
   }
 ];
