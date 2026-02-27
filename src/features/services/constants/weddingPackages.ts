@@ -1,7 +1,6 @@
 import type { PromoCardData } from '../ui/interfaces/promoCard';
-import coupleImg from '../../../assets/couple.png';
-import weddingImg from '../../../assets/wedding.png';
-import weddingBannerImg from '../../../assets/wedding_banner_page.png';
+import { PORTFOLIO_IMAGE_PATHS } from '../../portfolio/constants/portfolioAssets';
+
 
 export const weddingPackages: PromoCardData[] = [
   {
@@ -16,7 +15,7 @@ export const weddingPackages: PromoCardData[] = [
       "Delivery via online gallery within 1 to 2 weeks"
     ],
     price: ["$300 CAD"],
-    imagePath: coupleImg
+    imagePath: PORTFOLIO_IMAGE_PATHS.weddings[21]
   },
   {
     title: "Timeless Story",
@@ -30,7 +29,7 @@ export const weddingPackages: PromoCardData[] = [
       "Delivery via online gallery within 1 to 2 weeks"
     ],
     price: ["$600 CAD"],
-    imagePath: weddingImg
+    imagePath: PORTFOLIO_IMAGE_PATHS.weddings[23]
   },
   {
     title: "Eternal Love",
@@ -48,6 +47,6 @@ export const weddingPackages: PromoCardData[] = [
       "Delivery of wedding day photos within 1 to 2 weeks"
     ],
     price: ["$1,500 CAD"],
-    imagePath: weddingBannerImg
+    imagePath: PORTFOLIO_IMAGE_PATHS.weddings[29]
   }
 ];
