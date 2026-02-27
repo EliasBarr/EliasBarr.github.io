@@ -22,12 +22,22 @@ export const serviceCardData: CardModel[] = [
     previewImage: coupleImage,
     description: 'The most valuable portrait is the one that tells your story',
     link: '/people-studio-portraits',
+    gallery: [
+      PORTFOLIO_IMAGE_PATHS.family[1], // family2
+      PORTFOLIO_IMAGE_PATHS.family[3], // family4
+      PORTFOLIO_IMAGE_PATHS.family[5], // family6
+    ],
   },
   {
     title: 'Product Photography',
     previewImage: paprikaImage,
     description: 'Let your brand speak without saying a word',
     link: '/product-photography',
+    gallery: [
+      PORTFOLIO_IMAGE_PATHS.products[18], // product19
+      PORTFOLIO_IMAGE_PATHS.products[3], // product4
+      PORTFOLIO_IMAGE_PATHS.products[13], // product14
+    ],
   },
   {
     title: 'Events',

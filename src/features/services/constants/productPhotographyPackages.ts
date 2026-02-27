@@ -1,7 +1,5 @@
 import type { PromoCardData } from '../ui/interfaces/promoCard';
-import cupsImg from '../../../assets/cups_banner.png';
-import cupsBannerImg from '../../../assets/cups_banner.png';
-import paprikaImg from '../../../assets/paprika.png';
+import { PORTFOLIO_IMAGE_PATHS } from '../../portfolio/constants/portfolioAssets';
 
 export const productPhotographyPackages: PromoCardData[] = [
   {
@@ -15,7 +13,7 @@ export const productPhotographyPackages: PromoCardData[] = [
       "1 creative session, scheduled in advance."
     ],
     price: ["$300 CAD"],
-    imagePath: cupsImg
+    imagePath: PORTFOLIO_IMAGE_PATHS.products[18]
   },
   {
     title: "Clear Vision",
@@ -29,7 +27,7 @@ export const productPhotographyPackages: PromoCardData[] = [
       "Up to 2 scheduled creative sessions."
     ],
     price: ["$450 CAD"],
-    imagePath: cupsBannerImg
+    imagePath: PORTFOLIO_IMAGE_PATHS.products[3]
   },
   {
     title: "Creative Beacon",
@@ -43,6 +41,6 @@ export const productPhotographyPackages: PromoCardData[] = [
       "2 to 3 tailored sessions according to project goals."
     ],
     price: ["$750 CAD"],
-    imagePath: paprikaImg
+    imagePath: PORTFOLIO_IMAGE_PATHS.products[13]
   }
 ];
